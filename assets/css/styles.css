@@ -370,23 +370,23 @@ a {
   justify-content: space-between;
 }
 
-/* 9. HEADER & CINEMATIC HERO SPECIFIC STYLES */
+/* 9. HEADER & HERO SPECIFIC STYLES (Cores e Fontes Originais do Site) */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
   width: 100%;
-  background: rgba(14, 11, 8, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(217, 190, 122, 0.2);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background: rgba(255, 249, 240, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(207, 197, 186, 0.35);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-inner {
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 14px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -399,240 +399,220 @@ a {
   gap: 28px;
 }
 .header-nav-desktop a {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.85rem;
+  color: #2F241A;
+  font-size: 0.875rem;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 .header-nav-desktop a:hover {
-  color: #D9BE7A;
+  color: #B38A32;
 }
 
 .header-menu-btn {
   display: none;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(217, 190, 122, 0.3);
-  color: #ffffff;
+  background: #ffffff;
+  border: 1px solid rgba(207, 197, 186, 0.6);
+  color: #2F241A;
 }
 
 /* ==========================================================================
-   CINEMATIC LUXURY HERO (Estilo Fiel à Referência: Fundo Noturno + Dra. Protagonista)
+   HERO SECTION (Cores Originais: Fundo Creme, Textos em Bodoni Moda, Foto à Direita)
    ========================================================================== */
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 88vh;
-  background: #0E0B08;
+  background: #FFF9F0;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  padding: 80px 24px 100px 24px;
+  padding: 56px 24px 72px 24px;
   box-sizing: border-box;
 }
 
-/* Camada da Foto da Doutora ao Fundo Protagonista à Direita */
-.hero-bg-layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 62%;
-  max-width: 960px;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-bg-img-wrap {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.hero-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top right;
-  opacity: 0.96;
-}
-
-/* Gradientes Suaves de Iluminação e Vinheta Editorial */
-.hero-bg-gradient-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 65%;
-  background: linear-gradient(
-    to right,
-    #0E0B08 0%,
-    #0E0B08 30%,
-    rgba(14, 11, 8, 0.88) 60%,
-    rgba(14, 11, 8, 0.35) 85%,
-    rgba(14, 11, 8, 0.02) 100%
-  );
-}
-
-.hero-bg-gradient-bottom {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 18%;
-  background: linear-gradient(to top, #FFF9F0 0%, rgba(14, 11, 8, 0.95) 40%, rgba(14, 11, 8, 0) 100%);
-}
-
-.hero-bg-gradient-top {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 20%;
-  background: linear-gradient(to bottom, rgba(14, 11, 8, 0.85) 0%, rgba(14, 11, 8, 0) 100%);
-}
-
-/* Informações da Hero em Primeiro Plano ao Lado */
 .hero-container {
-  position: relative;
-  z-index: 10;
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
+  gap: 48px;
   box-sizing: border-box;
 }
 
-.hero-content-col {
-  max-width: 620px;
+.hero-left-col {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
 }
 
-/* Tag / Eyebrow Dourado */
-.hero-tag {
-  color: #D9BE7A;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
+.hero-right-col {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 8px;
+  position: relative;
 }
 
-/* Headline Editorial em Branco Puro */
+/* Tag Eyebrow Dourada */
+.hero-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.35rem 0.95rem;
+  border-radius: 9999px;
+  background: rgba(244, 235, 221, 0.85);
+  border: 1px solid rgba(179, 138, 50, 0.35);
+  color: #8C6B1F;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+
+/* Headline Editorial em Bodoni Moda */
 .hero-headline {
   font-family: 'Bodoni Moda', Georgia, serif;
-  font-size: clamp(2.8rem, 5.2vw, 5rem);
-  line-height: 1.04;
-  letter-spacing: -0.02em;
-  color: #FFFFFF;
-  font-weight: 600;
+  font-size: clamp(2.8rem, 4.4vw, 5.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+  color: #2F241A;
   text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+.hero-divider {
+  width: 72px;
+  height: 1.5px;
+  background-color: var(--gold-line);
   margin-bottom: 1.5rem;
 }
 
-.hero-headline .italic-gold {
-  color: #D9BE7A;
-  font-style: italic;
-  font-weight: 400;
-}
-
-/* Subheadline Muted White */
 .hero-subtext {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: clamp(0.925rem, 1.2vw, 1.05rem);
+  font-family: 'Manrope', sans-serif;
+  color: #594433;
+  font-size: clamp(0.925rem, 1.1vw, 1.05rem);
   line-height: 1.65;
   max-width: 520px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.85rem;
 }
 
-/* Botão Verde Estilo Referência (Falar pelo WhatsApp) */
-.btn-hero-green {
+/* Botão Verde Principal WhatsApp */
+.btn-cta-green {
   background: #0F9B66;
   color: #ffffff;
-  padding: 0.95rem 2rem;
+  padding: 0.85rem 1.85rem;
   border-radius: 9999px;
   font-weight: 700;
-  font-size: 0.925rem;
+  font-size: 0.875rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.625rem;
   white-space: nowrap;
-  box-shadow: 0 10px 28px -4px rgba(15, 155, 102, 0.45);
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px -4px rgba(15, 155, 102, 0.35);
   transition: transform 0.2s var(--ease-spring), background-color 0.2s ease, box-shadow 0.2s ease;
 }
-.btn-hero-green:hover {
+.btn-cta-green:hover {
   background: #0B8155;
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px -4px rgba(15, 155, 102, 0.55);
+  box-shadow: 0 12px 26px -4px rgba(15, 155, 102, 0.45);
 }
-.btn-hero-green:active {
-  transform: scale(0.98);
+.btn-cta-green:active {
+  transform: translateY(0) scale(0.98);
 }
-.btn-hero-green svg {
-  width: 20px !important;
-  height: 20px !important;
+.btn-cta-green svg {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  max-width: 18px !important;
   fill: currentColor;
 }
 
-/* Link Secundário Estilo Referência (Instagram) */
-.hero-secondary-link {
+/* Botão Secundário Dourado */
+.btn-cta-secondary {
+  border: 1px solid rgba(179, 138, 50, 0.4);
+  background: transparent;
+  color: #2F241A;
+  padding: 0.85rem 1.6rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-top: 1.1rem;
-  transition: color 0.2s ease, transform 0.2s ease;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s var(--ease-spring);
 }
-.hero-secondary-link:hover {
-  color: #D9BE7A;
-  transform: translateX(3px);
+.btn-cta-secondary:hover {
+  background-color: rgba(244, 235, 221, 0.75);
+  border-color: rgba(179, 138, 50, 0.7);
+  transform: translateY(-2px);
+}
+.btn-cta-secondary:active {
+  transform: translateY(0) scale(0.98);
 }
 
-/* Linha de Confiança em Vidro Escuro */
-.hero-trust-dark {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(217, 190, 122, 0.3);
+/* Container de Confiança COREN / ANVISA */
+.hero-trust-container {
+  background: #F8F1E5;
+  border: 1px solid rgba(217, 190, 122, 0.5);
   border-radius: 20px;
-  padding: 0.75rem 1.4rem;
+  padding: 0.75rem 1.5rem;
   display: flex;
   align-items: center;
   gap: 1.25rem;
   width: 100%;
   max-width: 480px;
-  margin-top: 2rem;
+  margin-top: 1.75rem;
 }
-.hero-trust-dark strong {
-  color: #FFFFFF;
+
+/* Moldura Fotográfica Protagonista à Direita (100% Nítida e Visível) */
+.hero-portrait-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 580px;
+  border-radius: 260px 260px 24px 24px;
+  overflow: hidden;
+  background: #f4ebdd;
+  box-shadow: 0 24px 50px -12px rgba(47, 36, 26, 0.18);
+  border: 2px solid #EFE4D0;
 }
-.hero-trust-dark span {
-  color: rgba(255, 255, 255, 0.7);
+
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Contorno Dourado Elegante */
+.hero-portrait-contour {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: 0;
+  border-radius: 270px 270px 32px 32px;
+  border: 1px solid rgba(179, 138, 50, 0.45);
+  pointer-events: none;
 }
 
 @media (max-width: 900px) {
-  .hero-section {
-    min-height: auto;
-    padding: 60px 20px 80px 20px;
+  .hero-container {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
   }
-  .hero-bg-layer {
-    width: 100%;
-    opacity: 0.35;
+  .hero-portrait-frame {
+    height: 440px !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
   }
-  .hero-bg-gradient-left {
-    width: 100%;
-    background: linear-gradient(to right, #0E0B08 0%, rgba(14, 11, 8, 0.92) 50%, rgba(14, 11, 8, 0.5) 100%);
+}
+ 100%);
   }
 }
 
