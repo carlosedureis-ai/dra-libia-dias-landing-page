@@ -370,22 +370,23 @@ a {
   justify-content: space-between;
 }
 
-/* 9. HEADER & HERO SPECIFIC STYLES */
+/* 9. HEADER & CINEMATIC HERO SPECIFIC STYLES */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
   width: 100%;
-  background: rgba(255, 249, 240, 0.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(207, 197, 186, 0.35);
+  background: rgba(14, 11, 8, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(217, 190, 122, 0.2);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .header-inner {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 14px 24px;
+  padding: 16px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -397,33 +398,46 @@ a {
   align-items: center;
   gap: 28px;
 }
+.header-nav-desktop a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.header-nav-desktop a:hover {
+  color: #D9BE7A;
+}
+
 .header-menu-btn {
   display: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(217, 190, 122, 0.3);
+  color: #ffffff;
 }
 
 /* ==========================================================================
-   HERO SECTION (Foto da Doutora Atrás + Informações ao Lado)
+   CINEMATIC LUXURY HERO (Estilo Fiel à Referência: Fundo Noturno + Dra. Protagonista)
    ========================================================================== */
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 640px;
-  background: #FFF9F0;
+  min-height: 88vh;
+  background: #0E0B08;
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 56px 24px 72px 24px;
+  padding: 80px 24px 100px 24px;
   box-sizing: border-box;
 }
 
-/* Camada da Foto da Doutora ao Fundo */
+/* Camada da Foto da Doutora ao Fundo Protagonista à Direita */
 .hero-bg-layer {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  width: 56%;
-  max-width: 820px;
+  width: 62%;
+  max-width: 960px;
   height: 100%;
   pointer-events: none;
   z-index: 1;
@@ -440,18 +454,25 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
-  opacity: 0.92;
+  object-position: top right;
+  opacity: 0.96;
 }
 
-/* Gradientes Suaves de Fusão Editorial */
+/* Gradientes Suaves de Iluminação e Vinheta Editorial */
 .hero-bg-gradient-left {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 55%;
-  background: linear-gradient(to right, #FFF9F0 0%, rgba(255, 249, 240, 0.92) 35%, rgba(255, 249, 240, 0) 100%);
+  width: 65%;
+  background: linear-gradient(
+    to right,
+    #0E0B08 0%,
+    #0E0B08 30%,
+    rgba(14, 11, 8, 0.88) 60%,
+    rgba(14, 11, 8, 0.35) 85%,
+    rgba(14, 11, 8, 0.02) 100%
+  );
 }
 
 .hero-bg-gradient-bottom {
@@ -459,8 +480,8 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 25%;
-  background: linear-gradient(to top, #FFF9F0 0%, rgba(255, 249, 240, 0) 100%);
+  height: 18%;
+  background: linear-gradient(to top, #FFF9F0 0%, rgba(14, 11, 8, 0.95) 40%, rgba(14, 11, 8, 0) 100%);
 }
 
 .hero-bg-gradient-top {
@@ -468,120 +489,153 @@ a {
   left: 0;
   right: 0;
   top: 0;
-  height: 15%;
-  background: linear-gradient(to bottom, #FFF9F0 0%, rgba(255, 249, 240, 0) 100%);
+  height: 20%;
+  background: linear-gradient(to bottom, rgba(14, 11, 8, 0.85) 0%, rgba(14, 11, 8, 0) 100%);
 }
 
 /* Informações da Hero em Primeiro Plano ao Lado */
 .hero-container {
   position: relative;
   z-index: 10;
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   box-sizing: border-box;
 }
 
 .hero-content-col {
-  max-width: 580px;
+  max-width: 620px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
 }
 
+/* Tag / Eyebrow Dourado */
+.hero-tag {
+  color: #D9BE7A;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Headline Editorial em Branco Puro */
 .hero-headline {
   font-family: 'Bodoni Moda', Georgia, serif;
-  font-size: clamp(2.7rem, 4.2vw, 4.8rem);
-  line-height: 0.98;
-  letter-spacing: -0.025em;
-  color: #2F241A;
+  font-size: clamp(2.8rem, 5.2vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  font-weight: 600;
   text-align: left;
+  margin-bottom: 1.5rem;
 }
 
-.hero-divider {
-  width: 72px;
-  height: 1.5px;
-  background-color: var(--gold-line);
+.hero-headline .italic-gold {
+  color: #D9BE7A;
+  font-style: italic;
+  font-weight: 400;
 }
 
-/* Green Primary Pill CTA */
-.btn-cta-green {
+/* Subheadline Muted White */
+.hero-subtext {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.925rem, 1.2vw, 1.05rem);
+  line-height: 1.65;
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+/* Botão Verde Estilo Referência (Falar pelo WhatsApp) */
+.btn-hero-green {
   background: #0F9B66;
   color: #ffffff;
-  padding: 0.85rem 1.85rem;
+  padding: 0.95rem 2rem;
   border-radius: 9999px;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.625rem;
   white-space: nowrap;
-  flex-shrink: 0;
-  box-shadow: 0 8px 20px -4px rgba(15, 155, 102, 0.35);
+  box-shadow: 0 10px 28px -4px rgba(15, 155, 102, 0.45);
   transition: transform 0.2s var(--ease-spring), background-color 0.2s ease, box-shadow 0.2s ease;
 }
-.btn-cta-green:hover {
+.btn-hero-green:hover {
   background: #0B8155;
   transform: translateY(-2px);
-  box-shadow: 0 12px 26px -4px rgba(15, 155, 102, 0.45);
+  box-shadow: 0 14px 32px -4px rgba(15, 155, 102, 0.55);
 }
-.btn-cta-green:active {
-  transform: translateY(0) scale(0.98);
+.btn-hero-green:active {
+  transform: scale(0.98);
 }
-.btn-cta-green svg {
-  width: 18px !important;
-  height: 18px !important;
-  min-width: 18px !important;
-  max-width: 18px !important;
+.btn-hero-green svg {
+  width: 20px !important;
+  height: 20px !important;
   fill: currentColor;
 }
 
-/* Secondary Gold Pill CTA */
-.btn-cta-secondary {
-  border: 1px solid rgba(179, 138, 50, 0.4);
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
-  color: #2F241A;
-  padding: 0.85rem 1.6rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  font-size: 0.875rem;
+/* Link Secundário Estilo Referência (Instagram) */
+.hero-secondary-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s var(--ease-spring);
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 1.1rem;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
-.btn-cta-secondary:hover {
-  background-color: rgba(244, 235, 221, 0.9);
-  border-color: rgba(179, 138, 50, 0.7);
-  transform: translateY(-2px);
-}
-.btn-cta-secondary:active {
-  transform: translateY(0) scale(0.98);
+.hero-secondary-link:hover {
+  color: #D9BE7A;
+  transform: translateX(3px);
 }
 
-/* Hero Trust Badges Container */
-.hero-trust-container {
-  background: rgba(248, 241, 229, 0.9);
+/* Linha de Confiança em Vidro Escuro */
+.hero-trust-dark {
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(217, 190, 122, 0.5);
+  border: 1px solid rgba(217, 190, 122, 0.3);
   border-radius: 20px;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.4rem;
   display: flex;
   align-items: center;
   gap: 1.25rem;
   width: 100%;
   max-width: 480px;
+  margin-top: 2rem;
 }
+.hero-trust-dark strong {
+  color: #FFFFFF;
+}
+.hero-trust-dark span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    min-height: auto;
+    padding: 60px 20px 80px 20px;
+  }
+  .hero-bg-layer {
+    width: 100%;
+    opacity: 0.35;
+  }
+  .hero-bg-gradient-left {
+    width: 100%;
+    background: linear-gradient(to right, #0E0B08 0%, rgba(14, 11, 8, 0.92) 50%, rgba(14, 11, 8, 0.5) 100%);
+  }
+}
+
 
 /* Floating Card Hero Highlight */
 .hero-floating-badge {
