@@ -87,20 +87,20 @@
 </head>
 <body>
 
-    <!-- 1. HEADER (Editorial Escuro de Alto Padrão • Fiel à 2ª Referência) -->
+    <!-- 1. HEADER (Horizontal Editorial de Luxo • Tons Originais) -->
     <header class="site-header" id="main-header">
         <div class="header-inner">
             
-            <!-- Brand Logo & Editorial Typography -->
+            <!-- Brand Logo Monogram & Editorial Typography -->
             <a href="#" class="flex items-center gap-3.5 group" aria-label="Página Inicial Dra. Líbia Dias">
-                <div class="w-10 h-10 rounded-full bg-white/10 p-0.5 border border-[#A98245]/40 flex items-center justify-center flex-shrink-0 group-hover:border-[#A98245] transition-colors">
-                    <img src="assets/images/logo-dra-libia.png" alt="Logo Dra. Líbia Dias" class="w-full h-full object-contain rounded-full" width="40" height="40"/>
+                <div class="w-11 h-11 rounded-full bg-white p-0.5 border border-[#B38A32]/40 shadow-sm flex items-center justify-center flex-shrink-0 group-hover:border-[#B38A32] transition-colors">
+                    <img src="assets/images/logo-dra-libia.png" alt="Logo Dra. Líbia Dias" class="w-full h-full object-contain rounded-full" width="44" height="44"/>
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-headline text-base md:text-lg font-bold tracking-widest text-[#F7F4ED] leading-none">
+                    <span class="font-headline text-lg md:text-xl font-bold tracking-wider text-[#2F241A] leading-none">
                         DRA. LÍBIA DIAS
                     </span>
-                    <span class="text-[8px] tracking-[0.25em] uppercase text-[#A98245] font-semibold mt-1">
+                    <span class="text-[9px] tracking-[0.25em] uppercase text-[#B38A32] font-semibold mt-1">
                         Estética • Naturalidade
                     </span>
                 </div>
@@ -108,107 +108,147 @@
 
             <!-- Desktop Navigation Menu Centralizado -->
             <nav class="header-nav-desktop" id="desktop-nav" aria-label="Navegação Principal">
-                <a href="#identificacao" class="nav-link">Para Quem É</a>
-                <a href="#procedimentos" class="nav-link">Procedimentos</a>
-                <a href="#como-funciona" class="nav-link">Como Funciona</a>
-                <a href="#sobre" class="nav-link">Sobre Mim</a>
-                <a href="#espaco" class="nav-link">Localização</a>
-                <a href="#faq" class="nav-link">Dúvidas</a>
+                <a href="#identificacao" class="nav-link hover:text-[#B38A32]">Para Quem É</a>
+                <a href="#procedimentos" class="nav-link hover:text-[#B38A32]">Procedimentos</a>
+                <a href="#como-funciona" class="nav-link hover:text-[#B38A32]">Como Funciona</a>
+                <a href="#sobre" class="nav-link hover:text-[#B38A32]">Sobre Mim</a>
+                <a href="#espaco" class="nav-link hover:text-[#B38A32]">Localização</a>
+                <a href="#faq" class="nav-link hover:text-[#B38A32]">Dúvidas</a>
             </nav>
 
             <!-- Actions: WhatsApp Pill CTA + Mobile Toggle -->
             <div class="flex items-center gap-3">
-                <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20em%20Manaus." target="_blank" rel="noopener noreferrer" class="btn-hero-green-dark hidden sm:inline-flex py-2.5 px-6 text-xs tracking-wide">
-                    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20em%20Manaus." target="_blank" rel="noopener noreferrer" class="btn-cta-green">
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.112.551 4.14 1.597 5.922l-1.697 6.322 6.467-1.697c1.724.965 3.69 1.453 5.633 1.453 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
                     </svg>
                     <span>Agendar no WhatsApp</span>
                 </a>
 
                 <!-- Mobile Menu Hamburger Button -->
-                <button type="button" id="mobile-menu-toggle" class="header-menu-btn w-9 h-9 rounded-full flex items-center justify-center focus:outline-none" aria-label="Abrir Menu de Navegação" aria-expanded="false">
-                    <span class="material-symbols-outlined text-xl" aria-hidden="true">menu</span>
+                <button type="button" id="mobile-menu-toggle" class="header-menu-btn w-9 h-9 rounded-full bg-white border border-outline-variant/60 items-center justify-center focus:outline-none" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+                    <span class="material-symbols-outlined text-xl text-[#2F241A]" aria-hidden="true">menu</span>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="max-w-6xl mx-auto px-6 py-4 bg-[#14120E]/98 backdrop-blur-xl border-t border-[#A98245]/20 flex flex-col gap-3">
-            <a href="#identificacao" class="text-sm font-semibold text-[#F7F4ED] py-2 border-b border-white/10">Para Quem É</a>
-            <a href="#procedimentos" class="text-sm font-semibold text-[#F7F4ED] py-2 border-b border-white/10">Procedimentos</a>
-            <a href="#como-funciona" class="text-sm font-semibold text-[#F7F4ED] py-2 border-b border-white/10">Como Funciona</a>
-            <a href="#sobre" class="text-sm font-semibold text-[#F7F4ED] py-2 border-b border-white/10">Sobre Mim</a>
-            <a href="#espaco" class="text-sm font-semibold text-[#F7F4ED] py-2 border-b border-white/10">Localização</a>
-            <a href="#faq" class="text-sm font-semibold text-[#F7F4ED] py-2">Dúvidas</a>
+        <div id="mobile-menu" class="max-w-6xl mx-auto px-6 py-4 bg-white/95 backdrop-blur-xl border-t border-outline-variant/20 flex flex-col gap-3">
+            <a href="#identificacao" class="text-sm font-semibold text-primary py-2 border-b border-outline-variant/20">Para Quem É</a>
+            <a href="#procedimentos" class="text-sm font-semibold text-primary py-2 border-b border-outline-variant/20">Procedimentos</a>
+            <a href="#como-funciona" class="text-sm font-semibold text-primary py-2 border-b border-outline-variant/20">Como Funciona</a>
+            <a href="#sobre" class="text-sm font-semibold text-primary py-2 border-b border-outline-variant/20">Sobre Mim</a>
+            <a href="#espaco" class="text-sm font-semibold text-primary py-2 border-b border-outline-variant/20">Localização</a>
+            <a href="#faq" class="text-sm font-semibold text-primary py-2">Dúvidas</a>
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (Editorial Escuro de Alto Impacto • Fiel à 2ª Referência) -->
+    <!-- 2. HERO SECTION (Fiel à Imagem de Referência • Foto Protagonista com Arco e Card Flutuante) -->
     <section class="hero-section">
         <div class="hero-container">
             
-            <!-- Coluna Esquerda: Eyebrow, Headline Grande, Subtexto, CTAs e Credenciais -->
+            <!-- Coluna Esquerda: Badge, Headline, Divisória, Subheadline, CTAs e Selos -->
             <div class="hero-left-col">
                 
-                <!-- 1. Eyebrow Editorial (Sem Pill, Dourado Discreto) -->
-                <span class="hero-eyebrow-dark hero-enter-1">
-                    HARMONIZAÇÃO FACIAL &amp; CORPORAL • MANAUS/AM
-                </span>
+                <!-- Badge de Localização -->
+                <div class="hero-enter-1">
+                    <span class="hero-badge-pill">
+                        <span class="material-symbols-outlined text-xs text-[#B38A32]" aria-hidden="true">location_on</span>
+                        MANAUS – AM
+                    </span>
+                </div>
 
-                <!-- 2. Headline Grande Bodoni Moda com quebra editorial -->
-                <h1 class="hero-headline-dark hero-enter-2">
+                <!-- Headline Editorial Serif Bodoni Moda -->
+                <h1 class="hero-headline font-semibold hero-enter-2">
                     Realce seus<br/>
-                    traços sem<br/>
-                    perder sua<br/>
-                    <span class="hero-italic-naturalidade">naturalidade.</span>
+                    traços sem perder<br/>
+                    sua <span class="text-gold-italic">naturalidade.</span>
                 </h1>
 
-                <!-- 3. Subheadline / Texto de Apoio -->
-                <p class="hero-subtext-dark hero-enter-4">
-                    Protocolos personalizados de <strong class="font-semibold text-white">Harmonização Facial</strong> e <strong class="font-semibold text-white">Estética Corporal</strong> com atendimento exclusivo e acolhedor no Centro Comercial Rio Jutaí, em Manaus.
+                <!-- Divisória Dourada Fina -->
+                <div class="hero-divider hero-enter-3" aria-hidden="true"></div>
+
+                <!-- Subheadline / Texto de Apoio -->
+                <p class="hero-subtext hero-enter-4">
+                    Protocolos personalizados de <strong class="font-semibold text-primary">Harmonização Facial</strong> e <strong class="font-semibold text-primary">Estética Corporal</strong> com atendimento exclusivo e acolhedor no Centro Comercial Rio Jutaí, em Manaus.
                 </p>
 
-                <!-- 4. Linha de Ações: WhatsApp Principal + Instagram Oficial -->
-                <div class="hero-actions-dark hero-enter-5">
-                    <!-- CTA Principal Verde Escuro Sofisticado -->
-                    <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20em%20Manaus." target="_blank" rel="noopener noreferrer" class="btn-hero-green-dark">
-                        <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.112.551 4.14 1.597 5.922l-1.697 6.322 6.467-1.697c1.724.965 3.69 1.453 5.633 1.453 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
-                        </svg>
+                <!-- Linha de Ações (CTAs) -->
+                <div class="hero-actions-row hero-enter-5">
+                    <!-- CTA Principal Verde -->
+                    <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20em%20Manaus." target="_blank" rel="noopener noreferrer" class="btn-cta-green">
+                        <span class="material-symbols-outlined text-lg" aria-hidden="true">calendar_month</span>
                         <span>Quero agendar minha avaliação</span>
                         <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
                     </a>
 
-                    <!-- CTA Secundário Instagram Oficial -->
-                    <a href="https://www.instagram.com/dra.libiadias?igsi=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="btn-hero-instagram-dark">
-                        <svg class="w-4 h-4 text-[#A98245]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                        <span>Instagram @dra.libiadias</span>
+                    <!-- CTA Secundário Dourado -->
+                    <a href="#como-funciona" class="btn-cta-secondary">
+                        <span class="material-symbols-outlined text-lg text-[#B38A32]" aria-hidden="true">person</span>
+                        <span>Como funciona a avaliação</span>
                     </a>
                 </div>
 
-                <!-- 5. Credenciais Discretas (Sem Card Bege) -->
-                <div class="hero-credentials-dark hero-enter-6">
-                    <div class="hero-cred-item">
-                        <span class="material-symbols-outlined cred-icon" aria-hidden="true">verified_user</span>
-                        <span><strong>COREN-AM Ativo</strong> (000.574.129)</span>
+                <!-- Linha de Confiança / Trust Badges Card -->
+                <div class="hero-trust-container hero-enter-6">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 rounded-full bg-white border border-[#E8DCB8] flex items-center justify-center flex-shrink-0 text-[#B38A32] shadow-sm">
+                            <span class="material-symbols-outlined text-base" aria-hidden="true">verified_user</span>
+                        </div>
+                        <div class="flex flex-col text-xs leading-tight">
+                            <strong class="font-bold text-[#2F241A]">COREN-AM Ativo</strong>
+                            <span class="text-on-surface-variant text-[11px]">(000.574.129)</span>
+                        </div>
                     </div>
+                    
+                    <div class="w-[1px] h-7 bg-[#D9BE7A]/50" aria-hidden="true"></div>
 
-                    <div class="hero-cred-item">
-                        <span class="material-symbols-outlined cred-icon" aria-hidden="true">spa</span>
-                        <span><strong>Produtos Originais</strong> ANVISA</span>
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 rounded-full bg-white border border-[#E8DCB8] flex items-center justify-center flex-shrink-0 text-[#B38A32] shadow-sm">
+                            <span class="material-symbols-outlined text-base" aria-hidden="true">spa</span>
+                        </div>
+                        <div class="flex flex-col text-xs leading-tight">
+                            <strong class="font-bold text-[#2F241A]">Produtos Originais</strong>
+                            <span class="text-on-surface-variant text-[11px]">ANVISA</span>
+                        </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- Coluna Direita: Fotografia Protagonista Limpa em Retângulo Vertical (54%) -->
+            <!-- Coluna Direita: Fotografia Protagonista no Arco + Card Flutuante + Detalhe Botânico -->
             <div class="hero-right-col">
-                <div class="hero-photo-wrapper hero-enter-photo">
-                    <img src="assets/images/dra-libia-hero.jpg" alt="Dra. Líbia Dias - Harmonização Facial e Corporal em Manaus" class="hero-photo-img" width="620" height="760" loading="eager"/>
+                <div class="hero-arch-container">
+                    
+                    <!-- Linha Dourada de Contorno do Arco com Nódulo -->
+                    <div class="hero-arch-contour" aria-hidden="true">
+                        <div class="hero-arch-node"></div>
+                    </div>
+
+                    <!-- Moldura Arqueada da Imagem (Aparece Imediatamente) -->
+                    <div class="hero-arch-frame hero-enter-photo shadow-2xl">
+                        <img src="assets/images/dra-libia-hero.jpg" alt="Dra. Líbia Dias - Harmonização Facial e Corporal em Manaus" width="500" height="580" loading="eager"/>
+                    </div>
+
+                    <!-- Card Flutuante de Avaliação Personalizada -->
+                    <div class="hero-floating-card hero-enter-card">
+                        <div class="w-9 h-9 rounded-full bg-[#FAF2E3] border border-[#B38A32]/40 flex items-center justify-center mx-auto text-[#B38A32] shadow-sm">
+                            <span class="material-symbols-outlined text-lg" aria-hidden="true">person</span>
+                        </div>
+                        <div class="font-headline font-semibold text-xs md:text-sm text-[#2F241A] mt-2.5 leading-snug">
+                            Avaliação personalizada
+                        </div>
+                        <div class="w-8 h-[1px] bg-[#B38A32]/40 mx-auto my-2" aria-hidden="true"></div>
+                        <div class="text-[11px] font-semibold text-[#B38A32] tracking-wide">
+                            Manaus-AM
+                        </div>
+                    </div>
+
+                    <!-- Ilustração Botânica Linear Sutil -->
+                    <svg class="absolute -bottom-4 -right-4 w-36 h-36 pointer-events-none opacity-80 z-10" viewBox="0 0 100 100" fill="none" stroke="rgba(218, 190, 120, 0.65)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M70 95 C65 70 45 50 15 45 M70 95 C60 80 50 70 30 65 M55 78 C58 68 68 60 80 58 C68 55 60 45 58 35 C52 45 42 50 30 52 C42 55 50 65 55 78 Z M35 62 C38 52 48 48 58 46 C48 44 42 36 40 28 C34 36 26 40 16 42 C26 44 32 52 35 62 Z"/>
+                    </svg>
+
                 </div>
             </div>
 
