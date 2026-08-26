@@ -1184,37 +1184,70 @@ a {
   }
 }
 
-/* 14. ACCESSIBILITY: REDUCED MOTION */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+/* 14. HERO KEYFRAME ENTRANCE ANIMATIONS (Immediate Living Cascade on Mount) */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 36px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
-/* 15. LIVING MOTION & PROGRESSIVE SCROLL REVEAL (Emil Kowalski High-End Standard) */
-html.js-scroll-ready [data-reveal] {
+@keyframes heroFadeRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(44px, 0, 0) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes heroScaleIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.hero-enter-1 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both; }
+.hero-enter-2 { animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both; }
+.hero-enter-3 { animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both; }
+.hero-enter-4 { animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.40s both; }
+.hero-enter-5 { animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.52s both; }
+.hero-enter-6 { animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.64s both; }
+.hero-enter-photo { animation: heroFadeRight 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.20s both; }
+.hero-enter-card { animation: heroScaleIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.60s both; }
+
+/* 15. PROGRESSIVE SCROLL REVEAL STYLES (Smooth, GPU-accelerated) */
+.scroll-reveal {
   opacity: 0;
-  transform: translate3d(0, 42px, 0);
+  transform: translate3d(0, 48px, 0);
   transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
-html.js-scroll-ready [data-reveal="left"] {
-  transform: translate3d(-46px, 0, 0);
+.scroll-reveal.reveal-left {
+  transform: translate3d(-48px, 0, 0);
 }
 
-html.js-scroll-ready [data-reveal="right"] {
-  transform: translate3d(46px, 0, 0);
+.scroll-reveal.reveal-right {
+  transform: translate3d(48px, 0, 0);
 }
 
-html.js-scroll-ready [data-reveal="scale"] {
-  transform: translate3d(0, 28px, 0) scale(0.93);
+.scroll-reveal.reveal-scale {
+  transform: translate3d(0, 32px, 0) scale(0.92);
 }
 
-html.js-scroll-ready [data-reveal].is-revealed {
+.scroll-reveal.is-visible {
   opacity: 1 !important;
   transform: translate3d(0, 0, 0) scale(1) !important;
 }
@@ -1225,7 +1258,7 @@ html.js-scroll-ready [data-reveal].is-revealed {
   transform-origin: left center;
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
 }
-.steps-timeline-wrap.is-revealed .steps-connector-line {
+.steps-timeline-wrap.is-visible .steps-connector-line {
   transform: scaleX(1) !important;
 }
 
@@ -1307,11 +1340,25 @@ aside[aria-label="Atendimento no WhatsApp"] .whatsapp-cta {
 }
 
 @media (max-width: 768px) {
-  html.js-scroll-ready [data-reveal="left"],
-  html.js-scroll-ready [data-reveal="right"] {
+  .scroll-reveal.reveal-left,
+  .scroll-reveal.reveal-right {
     transform: translate3d(0, 28px, 0);
   }
 }
+
+/* 16. ACCESSIBILITY: REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 
 
 

@@ -1,7 +1,7 @@
 /**
  * Dra. Líbia Dias - Landing Page Script
  * Secure, Vanilla JavaScript without external dependencies.
- * Progressive Scroll Reveal & Living Interactive UI Modules.
+ * Living Progressive Scroll Reveal & Interactive UI Modules.
  * Zero vulnerabilities, XSS-safe, CSP compliant.
  */
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initProcedureFilters();
     initFaqAccordion();
     initWhatsAppHelpers();
-    initLivingScrollAnimations();
+    initScrollReveal();
 });
 
 /**
@@ -175,28 +175,25 @@ function fallbackWhatsAppOpen() {
 }
 
 /**
- * 6. LIVING PROGRESSIVE SCROLL REVEAL (Safe & Native)
- * - Pure GPU Acceleration (transform + opacity).
- * - Immediate Hero Cascade on Load.
- * - Staggered Storytelling Reveal on Scroll.
- * - Failsafe Timer guarantees zero hidden content.
+ * 6. PROGRESSIVE SCROLL REVEAL ENGINE
+ * - Detects viewport entry on scroll
+ * - Staggers transitions smoothly
+ * - Hardware accelerated with fail-safe timer
  */
-function initLivingScrollAnimations() {
-    // Check reduced motion preference
+function initScrollReveal() {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) {
+        document.querySelectorAll(".scroll-reveal").forEach(el => el.classList.add("is-visible"));
         return;
     }
 
     if (!("IntersectionObserver" in window)) {
+        document.querySelectorAll(".scroll-reveal").forEach(el => el.classList.add("is-visible"));
         return;
     }
 
-    // Activate animation styles
-    document.documentElement.classList.add("js-scroll-ready");
-
-    const revealElements = document.querySelectorAll("[data-reveal]");
-    if (!revealElements.length) return;
+    const elements = document.querySelectorAll(".scroll-reveal");
+    if (!elements.length) return;
 
     const isMobile = window.innerWidth <= 768;
 
@@ -210,10 +207,10 @@ function initLivingScrollAnimations() {
 
                     if (delayMs > 0) {
                         setTimeout(() => {
-                            el.classList.add("is-revealed");
+                            el.classList.add("is-visible");
                         }, delayMs);
                     } else {
-                        el.classList.add("is-revealed");
+                        el.classList.add("is-visible");
                     }
 
                     obs.unobserve(el);
@@ -221,19 +218,19 @@ function initLivingScrollAnimations() {
             });
         },
         {
-            threshold: isMobile ? 0.05 : 0.08,
-            rootMargin: isMobile ? "0px 0px -15px 0px" : "0px 0px -35px 0px"
+            threshold: isMobile ? 0.08 : 0.12,
+            rootMargin: isMobile ? "0px 0px -20px 0px" : "0px 0px -40px 0px"
         }
     );
 
-    revealElements.forEach(el => {
+    elements.forEach(el => {
         observer.observe(el);
     });
 
     // Failsafe safety net: reveal all after 4.5s
     setTimeout(() => {
-        document.querySelectorAll("[data-reveal]:not(.is-revealed)").forEach(el => {
-            el.classList.add("is-revealed");
+        document.querySelectorAll(".scroll-reveal:not(.is-visible)").forEach(el => {
+            el.classList.add("is-visible");
         });
     }, 4500);
 }
