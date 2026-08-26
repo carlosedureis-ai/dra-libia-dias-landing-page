@@ -1,7 +1,6 @@
 /* ==========================================================================
    DRA. LÍBIA DIAS - HIGH-END EDITORIAL DESIGN SYSTEM & COMPILED CSS
-   Crafted following Agency-Tier UI/UX, Emil Kowalski Motion & Zero Anti-Patterns
-   Zero Emojis • Double-Bezel Cards • Editorial Hero Arch • Horizontal Header
+   Rock-Solid Desktop & Mobile Responsive Architecture
    ========================================================================== */
 
 /* 1. RESET & BASE */
@@ -28,6 +27,7 @@ body {
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
+  width: 100%;
 }
 
 img {
@@ -86,7 +86,6 @@ a {
   --whatsapp: #0F9B66;
   --whatsapp-hover: #0B8155;
   
-  /* Custom Smooth Physics Easings (Emil Kowalski) */
   --ease-out-quad: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
 }
@@ -162,7 +161,7 @@ a {
 .bg-white\/95 { background-color: rgba(255, 255, 255, 0.95); }
 .fill-current { fill: currentColor; }
 
-/* 5. FLEXBOX & GRID */
+/* 5. FLEXBOX & GRID UTILITIES */
 .flex { display: flex; }
 .inline-flex { display: inline-flex; }
 .flex-col { flex-direction: column; }
@@ -179,6 +178,7 @@ a {
 .grid { display: grid; }
 .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
 .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .gap-1 { gap: 0.25rem; }
 .gap-1\.5 { gap: 0.375rem; }
@@ -194,7 +194,7 @@ a {
 .gap-10 { gap: 2.5rem; }
 .gap-12 { gap: 3rem; }
 
-/* 6. SPACING */
+/* 6. SPACING UTILITIES */
 .p-0\.5 { padding: 0.125rem; }
 .p-1 { padding: 0.25rem; }
 .p-1\.5 { padding: 0.375rem; }
@@ -272,7 +272,7 @@ a {
 .mx-auto { margin-left: auto; margin-right: auto; }
 .my-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
 
-/* 7. SIZING & LAYOUT */
+/* 7. SIZING & CONTAINERS */
 .w-full { width: 100%; }
 .w-auto { width: auto; }
 .w-1\.5 { width: 0.375rem; }
@@ -289,7 +289,6 @@ a {
 .w-36 { width: 9rem; }
 .w-44 { width: 11rem; }
 .w-\[1px\] { width: 1px; }
-.w-\[180px\] { width: 180px; }
 
 .h-1\.5 { height: 0.375rem; }
 .h-2 { height: 0.5rem; }
@@ -352,7 +351,7 @@ a {
 .overflow-hidden { overflow: hidden; }
 .overflow-x-hidden { overflow-x: hidden; }
 
-/* 8. BORDERS, RADII & DOUBLE-BEZEL */
+/* 8. BORDERS & RADII */
 .rounded-lg { border-radius: 0.5rem; }
 .rounded-xl { border-radius: 0.75rem; }
 .rounded-2xl { border-radius: 1rem; }
@@ -384,7 +383,7 @@ a {
 .border-outline-variant\/50 { border-color: rgba(207, 197, 186, 0.5); }
 .border-outline-variant\/60 { border-color: rgba(207, 197, 186, 0.6); }
 
-/* Double-Bezel Hardware-Style Card Enclosures */
+/* Double-Bezel Hardware Cards */
 .double-bezel-card {
   background: rgba(74, 63, 48, 0.025);
   border: 1px solid rgba(207, 197, 186, 0.45);
@@ -409,7 +408,7 @@ a {
   justify-content: space-between;
 }
 
-/* 9. HEADER & HERO SPECIFIC STYLING */
+/* 9. HEADER & HERO ARCHITECTURE */
 .site-header {
   background: rgba(255, 249, 240, 0.95);
   backdrop-filter: blur(12px);
@@ -422,13 +421,31 @@ a {
   transition: all 0.3s ease;
 }
 
+.header-nav-desktop {
+  display: none;
+}
+.header-menu-btn {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .header-nav-desktop {
+    display: flex !important;
+    align-items: center;
+    gap: 1.75rem;
+  }
+  .header-menu-btn {
+    display: none !important;
+  }
+}
+
 .hero-section {
   min-height: calc(100vh - 75px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
   width: 100%;
 }
 
@@ -455,24 +472,39 @@ a {
   position: relative;
 }
 
-@media (min-width: 1024px) {
+/* Desktop Side-by-Side Grid */
+@media (min-width: 768px) {
   .hero-container {
-    flex-direction: row;
+    flex-direction: row !important;
     align-items: center;
-    gap: 3.5rem;
+    gap: 2.5rem;
   }
   .hero-left-col {
-    width: 46%;
+    width: 48% !important;
     flex-shrink: 0;
   }
   .hero-right-col {
-    width: 54%;
+    width: 52% !important;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero-container {
+    gap: 4rem;
+  }
+  .hero-left-col {
+    width: 45% !important;
+  }
+  .hero-right-col {
+    width: 55% !important;
   }
 }
 
 .hero-headline {
   font-family: 'Bodoni Moda', Georgia, serif;
-  font-size: clamp(3.2rem, 5.2vw, 5.8rem);
+  font-size: clamp(2.8rem, 4.8vw, 5.8rem);
   line-height: 0.94;
   letter-spacing: -0.025em;
   color: #2F241A;
@@ -560,8 +592,8 @@ a {
 .hero-arch-container {
   position: relative;
   width: 100%;
-  max-width: 580px;
-  height: 640px;
+  max-width: 560px;
+  height: 620px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -619,6 +651,21 @@ a {
   text-align: center;
   box-shadow: 0 16px 36px -8px rgba(47, 36, 26, 0.12);
   z-index: 20;
+}
+
+@media (max-width: 767px) {
+  .hero-arch-container {
+    height: 440px;
+    max-width: 380px;
+    margin: 1rem auto 0.5rem auto;
+  }
+  .hero-floating-card {
+    top: auto;
+    bottom: 15px;
+    right: -5px;
+    padding: 0.85rem;
+    width: 155px;
+  }
 }
 
 /* Standard WhatsApp CTA (for footer/floating) */
@@ -718,19 +765,15 @@ a {
   opacity: 1;
 }
 
-/* 11. RESPONSIVE BREAKPOINTS */
+/* 11. RESPONSIVE BREAKPOINTS (TABLET & DESKTOP) */
 @media (min-width: 640px) {
   .sm\:flex-row { flex-direction: row; }
   .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sm\:w-auto { width: auto; }
-  .sm\:text-5xl { font-size: 3rem; line-height: 1.15; }
-  .sm\:inline-block { display: inline-block; }
-  .sm\:hidden { display: none; }
 }
 
 @media (min-width: 768px) {
   .md\:flex { display: flex; }
-  .md\:hidden { display: none; }
   .md\:flex-row { flex-direction: row; }
   .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -750,25 +793,6 @@ a {
 @media (min-width: 1024px) {
   .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .lg\:pb-20 { padding-bottom: 5rem; }
-}
-
-/* Mobile Hero Reordering */
-@media (max-width: 1023px) {
-  .hero-arch-container {
-    height: 480px;
-    max-width: 420px;
-    margin: 1.5rem auto 0.5rem auto;
-  }
-  .hero-floating-card {
-    top: auto;
-    bottom: 20px;
-    right: -10px;
-    padding: 0.875rem;
-    width: 165px;
-  }
-  .hero-headline {
-    font-size: clamp(2.8rem, 10vw, 4rem);
-  }
 }
 
 /* 12. ACCESSIBILITY: REDUCED MOTION */
