@@ -482,7 +482,7 @@
             </div>
 
             <!-- Timeline Conectada: Linha Dourada + Cards 01, 02 e 03 -->
-            <div class="steps-timeline-wrap">
+            <div class="steps-timeline-wrap" data-reveal data-delay="0.1">
                 
                 <!-- Linha Conectora Dourada com Pontos (Apenas no Desktop) -->
                 <div class="steps-connector-line" aria-hidden="true">
@@ -1053,5 +1053,31 @@
             </span>
         </a>
     </aside>
+
+    <script>
+    (function() {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (!('IntersectionObserver' in window)) return;
+        document.documentElement.classList.add('js-scroll-ready');
+        var els = document.querySelectorAll('[data-reveal]');
+        var isMob = window.innerWidth <= 768;
+        var obs = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    var el = entry.target;
+                    var d = parseFloat(el.getAttribute('data-delay') || '0');
+                    var delay = (isMob ? d * 0.6 : d) * 1000;
+                    if (delay > 0) {
+                        setTimeout(function() { el.classList.add('is-revealed'); }, delay);
+                    } else {
+                        el.classList.add('is-revealed');
+                    }
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: isMob ? 0.05 : 0.08, rootMargin: isMob ? '0px 0px -10px 0px' : '0px 0px -30px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+    })();
+    </script>
 </body>
 </html>

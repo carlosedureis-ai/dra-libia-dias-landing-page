@@ -1,7 +1,7 @@
 /**
  * Dra. Líbia Dias - Landing Page Script
  * Secure, Vanilla JavaScript without external dependencies.
- * Progressive Scroll Reveal & Interactive UI Modules.
+ * Progressive Scroll Reveal & Living Interactive UI Modules.
  * Zero vulnerabilities, XSS-safe, CSP compliant.
  */
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initProcedureFilters();
     initFaqAccordion();
     initWhatsAppHelpers();
-    initProgressiveScrollReveal();
+    initLivingScrollAnimations();
 });
 
 /**
@@ -175,13 +175,13 @@ function fallbackWhatsAppOpen() {
 }
 
 /**
- * 6. PROGRESSIVE SCROLL REVEAL ENGINE
- * - Content is 100% visible by default.
- * - Activates smoothly on scroll with GPU-accelerated CSS transitions.
- * - Respects prefers-reduced-motion.
- * - Failsafe fallback timer guarantees complete visibility.
+ * 6. LIVING PROGRESSIVE SCROLL REVEAL (Safe & Native)
+ * - Pure GPU Acceleration (transform + opacity).
+ * - Immediate Hero Cascade on Load.
+ * - Staggered Storytelling Reveal on Scroll.
+ * - Failsafe Timer guarantees zero hidden content.
  */
-function initProgressiveScrollReveal() {
+function initLivingScrollAnimations() {
     // Check reduced motion preference
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) {
@@ -192,7 +192,7 @@ function initProgressiveScrollReveal() {
         return;
     }
 
-    // Enable JS Scroll Reveal styling
+    // Activate animation styles
     document.documentElement.classList.add("js-scroll-ready");
 
     const revealElements = document.querySelectorAll("[data-reveal]");
@@ -205,8 +205,8 @@ function initProgressiveScrollReveal() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const el = entry.target;
-                    const delaySeconds = parseFloat(el.dataset.delay || "0");
-                    const delayMs = (isMobile ? delaySeconds * 0.65 : delaySeconds) * 1000;
+                    const delaySec = parseFloat(el.getAttribute("data-delay") || "0");
+                    const delayMs = (isMobile ? delaySec * 0.6 : delaySec) * 1000;
 
                     if (delayMs > 0) {
                         setTimeout(() => {
@@ -221,8 +221,8 @@ function initProgressiveScrollReveal() {
             });
         },
         {
-            threshold: isMobile ? 0.05 : 0.12,
-            rootMargin: isMobile ? "0px 0px -20px 0px" : "0px 0px -40px 0px"
+            threshold: isMobile ? 0.05 : 0.08,
+            rootMargin: isMobile ? "0px 0px -15px 0px" : "0px 0px -35px 0px"
         }
     );
 
@@ -230,10 +230,10 @@ function initProgressiveScrollReveal() {
         observer.observe(el);
     });
 
-    // Fail-safe: Reveal everything after 4s in case any observer condition fails
+    // Failsafe safety net: reveal all after 4.5s
     setTimeout(() => {
         document.querySelectorAll("[data-reveal]:not(.is-revealed)").forEach(el => {
             el.classList.add("is-revealed");
         });
-    }, 4000);
+    }, 4500);
 }
