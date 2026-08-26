@@ -1039,35 +1039,19 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Sticky Floating Button com Capsule -->
-    <aside aria-label="Atendimento no WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center group">
-        <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20em%20Manaus." target="_blank" rel="noopener noreferrer" class="whatsapp-cta flex items-center gap-3 text-white pl-4 pr-1.5 py-1.5 rounded-full shadow-2xl">
-            <span class="font-bold text-xs hidden sm:inline-block pr-1">Agende no WhatsApp</span>
-            <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24">
-                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.112.551 4.14 1.597 5.922l-1.697 6.322 6.467-1.697c1.724.965 3.69 1.453 5.633 1.453 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
-                </svg>
-            </span>
-        </a>
-    </aside>
-
-    <!-- Embedded High-Performance Scroll Observer Bootstrap -->
+    <!-- Embedded Dual-Engine Active Scroll Reveal Bootstrap -->
     <script>
     (function() {
-        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelectorAll('.scroll-reveal').forEach(function(el) { el.classList.add('is-visible'); });
-            return;
-        }
-        if (!('IntersectionObserver' in window)) {
-            document.querySelectorAll('.scroll-reveal').forEach(function(el) { el.classList.add('is-visible'); });
-            return;
-        }
         var elements = document.querySelectorAll('.scroll-reveal');
+        if (!elements.length) return;
         var isMob = window.innerWidth <= 768;
-        var observer = new IntersectionObserver(function(entries, obs) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    var el = entry.target;
+
+        function checkElements() {
+            var triggerPoint = window.innerHeight * 0.90;
+            elements.forEach(function(el) {
+                if (el.classList.contains('is-visible')) return;
+                var rect = el.getBoundingClientRect();
+                if (rect.top < triggerPoint && rect.bottom > 0) {
                     var delaySec = parseFloat(el.getAttribute('data-delay') || '0');
                     var delayMs = (isMob ? delaySec * 0.6 : delaySec) * 1000;
                     if (delayMs > 0) {
@@ -1075,21 +1059,37 @@
                     } else {
                         el.classList.add('is-visible');
                     }
-                    obs.unobserve(el);
                 }
             });
-        }, {
-            threshold: isMob ? 0.08 : 0.12,
-            rootMargin: isMob ? '0px 0px -20px 0px' : '0px 0px -40px 0px'
-        });
-        elements.forEach(function(el) { observer.observe(el); });
+        }
 
-        // Fallback: make sure all are visible after 4.5s
+        checkElements();
+        window.addEventListener('scroll', checkElements, { passive: true });
+        window.addEventListener('resize', checkElements, { passive: true });
+        window.addEventListener('load', checkElements);
+
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function(entries, obs) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var el = entry.target;
+                        var delaySec = parseFloat(el.getAttribute('data-delay') || '0');
+                        var delayMs = (isMob ? delaySec * 0.6 : delaySec) * 1000;
+                        if (delayMs > 0) {
+                            setTimeout(function() { el.classList.add('is-visible'); }, delayMs);
+                        } else {
+                            el.classList.add('is-visible');
+                        }
+                        obs.unobserve(el);
+                    }
+                });
+            }, { threshold: isMob ? 0.05 : 0.10, rootMargin: isMob ? '0px 0px -15px 0px' : '0px 0px -30px 0px' });
+            elements.forEach(function(el) { observer.observe(el); });
+        }
+
         setTimeout(function() {
-            document.querySelectorAll('.scroll-reveal:not(.is-visible)').forEach(function(el) {
-                el.classList.add('is-visible');
-            });
-        }, 4500);
+            elements.forEach(function(el) { el.classList.add('is-visible'); });
+        }, 4000);
     })();
     </script>
 </body>

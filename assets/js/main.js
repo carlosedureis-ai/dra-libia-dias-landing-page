@@ -1,8 +1,7 @@
 /**
  * Dra. Líbia Dias - Landing Page Script
- * Secure, Vanilla JavaScript without external dependencies.
- * Living Progressive Scroll Reveal & Interactive UI Modules.
- * Zero vulnerabilities, XSS-safe, CSP compliant.
+ * Active Progressive Scroll Reveal & Interactive UI Modules.
+ * Vanilla JavaScript, 60fps/120fps hardware-accelerated.
  */
 
 "use strict";
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initProcedureFilters();
     initFaqAccordion();
     initWhatsAppHelpers();
-    initScrollReveal();
+    initActiveScrollReveal();
 });
 
 /**
@@ -175,30 +174,47 @@ function fallbackWhatsAppOpen() {
 }
 
 /**
- * 6. PROGRESSIVE SCROLL REVEAL ENGINE
- * - Detects viewport entry on scroll
- * - Staggers transitions smoothly
- * - Hardware accelerated with fail-safe timer
+ * 6. ACTIVE PROGRESSIVE SCROLL REVEAL ENGINE
+ * Combines continuous scroll tracking (getBoundingClientRect) + IntersectionObserver.
+ * Triggers animations with 100% certainty across all browsers and environments.
  */
-function initScrollReveal() {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) {
-        document.querySelectorAll(".scroll-reveal").forEach(el => el.classList.add("is-visible"));
-        return;
-    }
-
-    if (!("IntersectionObserver" in window)) {
-        document.querySelectorAll(".scroll-reveal").forEach(el => el.classList.add("is-visible"));
-        return;
-    }
-
+function initActiveScrollReveal() {
     const elements = document.querySelectorAll(".scroll-reveal");
     if (!elements.length) return;
 
     const isMobile = window.innerWidth <= 768;
 
-    const observer = new IntersectionObserver(
-        (entries, obs) => {
+    function revealCheck() {
+        const triggerPoint = window.innerHeight * 0.90;
+
+        elements.forEach(el => {
+            if (el.classList.contains("is-visible")) return;
+
+            const rect = el.getBoundingClientRect();
+            if (rect.top < triggerPoint && rect.bottom > 0) {
+                const delaySec = parseFloat(el.getAttribute("data-delay") || "0");
+                const delayMs = (isMobile ? delaySec * 0.6 : delaySec) * 1000;
+
+                if (delayMs > 0) {
+                    setTimeout(() => {
+                        el.classList.add("is-visible");
+                    }, delayMs);
+                } else {
+                    el.classList.add("is-visible");
+                }
+            }
+        });
+    }
+
+    // Run immediately on page mount and load
+    revealCheck();
+    window.addEventListener("scroll", revealCheck, { passive: true });
+    window.addEventListener("resize", revealCheck, { passive: true });
+    window.addEventListener("load", revealCheck);
+
+    // Also use IntersectionObserver as immediate trigger
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const el = entry.target;
@@ -212,25 +228,19 @@ function initScrollReveal() {
                     } else {
                         el.classList.add("is-visible");
                     }
-
                     obs.unobserve(el);
                 }
             });
-        },
-        {
-            threshold: isMobile ? 0.08 : 0.12,
-            rootMargin: isMobile ? "0px 0px -20px 0px" : "0px 0px -40px 0px"
-        }
-    );
-
-    elements.forEach(el => {
-        observer.observe(el);
-    });
-
-    // Failsafe safety net: reveal all after 4.5s
-    setTimeout(() => {
-        document.querySelectorAll(".scroll-reveal:not(.is-visible)").forEach(el => {
-            el.classList.add("is-visible");
+        }, {
+            threshold: isMobile ? 0.05 : 0.10,
+            rootMargin: isMobile ? "0px 0px -15px 0px" : "0px 0px -30px 0px"
         });
-    }, 4500);
+
+        elements.forEach(el => observer.observe(el));
+    }
+
+    // Fail-safe: ensure all elements are visible after 4s
+    setTimeout(() => {
+        elements.forEach(el => el.classList.add("is-visible"));
+    }, 4000);
 }
