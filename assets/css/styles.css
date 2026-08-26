@@ -1222,3 +1222,36 @@ a {
   }
 }
 
+/* 16. PROGRESSIVE SCROLL REVEAL STYLES (Safe, zero-dependency, JS-activated) */
+html.js-scroll-ready [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+html.js-scroll-ready [data-reveal="left"] {
+  transform: translate3d(-36px, 0, 0);
+}
+
+html.js-scroll-ready [data-reveal="right"] {
+  transform: translate3d(36px, 0, 0);
+}
+
+html.js-scroll-ready [data-reveal="scale"] {
+  transform: translate3d(0, 20px, 0) scale(0.96);
+}
+
+html.js-scroll-ready [data-reveal].is-revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale(1) !important;
+}
+
+@media (max-width: 768px) {
+  html.js-scroll-ready [data-reveal="left"],
+  html.js-scroll-ready [data-reveal="right"] {
+    transform: translate3d(0, 24px, 0);
+  }
+}
+
+
