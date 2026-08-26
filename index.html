@@ -73,30 +73,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap" rel="stylesheet"/>
 
-    <!-- Standalone Production Compiled CSS (Zero Runtime Overhead, Zero FOUC) -->
-    <link rel="stylesheet" href="assets/css/styles.css?v=3"/>
-
-    <!-- Critical Inlined Layout Protection (Prevents Browser Cache Mismatches) -->
-    <style>
-      .site-header { width: 100%; position: sticky; top: 0; z-index: 50; background: rgba(255,249,240,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(207,197,186,0.35); }
-      .header-inner { max-width: 1320px; margin: 0 auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
-      .header-nav-desktop { display: flex; align-items: center; gap: 28px; font-size: 13px; font-weight: 600; color: #5A4E42; }
-      .header-menu-btn { display: none; }
-      .hero-section { max-width: 1320px; margin: 0 auto; padding: 40px 24px 60px 24px; display: flex; align-items: center; justify-content: center; min-height: calc(100vh - 75px); }
-      .hero-container { display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; gap: 48px; }
-      .hero-left-col { width: 48%; max-width: 580px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; flex-shrink: 0; }
-      .hero-right-col { width: 52%; display: flex; justify-content: center; align-items: center; position: relative; }
-      .hero-headline { font-family: 'Bodoni Moda', Georgia, serif; font-size: clamp(2.8rem, 4.5vw, 5.4rem); line-height: 0.96; letter-spacing: -0.025em; color: #2F241A; text-align: left; margin-bottom: 16px; }
-      .hero-arch-container { position: relative; width: 100%; max-width: 560px; height: 620px; display: flex; justify-content: center; align-items: flex-end; }
-      @media (max-width: 768px) {
-        .header-nav-desktop { display: none !important; }
-        .header-menu-btn { display: flex !important; }
-        .hero-container { flex-direction: column !important; align-items: flex-start !important; gap: 32px !important; }
-        .hero-left-col { width: 100% !important; }
-        .hero-right-col { width: 100% !important; }
-        .hero-arch-container { height: 440px !important; max-width: 380px !important; margin: 1rem auto 0 auto !important; }
-      }
-    </style>
+    <!-- Standalone Production Compiled CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css?v=4"/>
 
     <!-- Modular Production JavaScript -->
     <script src="assets/js/main.js" defer></script>
@@ -149,7 +127,7 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="md:hidden max-w-[1320px] mx-auto px-6 py-4 bg-white/95 backdrop-blur-xl border-t border-outline-variant/20 flex flex-col gap-3">
+        <div id="mobile-menu" class="max-w-6xl mx-auto px-6 py-4 bg-white/95 backdrop-blur-xl border-t border-outline-variant/20 flex flex-col gap-3">
             <a href="#identificacao" class="text-sm font-semibold text-primary py-2 border-b border-outline-variant/20">Para Quem É</a>
             <a href="#procedimentos" class="text-sm font-semibold text-primary py-2 border-b border-outline-variant/20">Procedimentos</a>
             <a href="#como-funciona" class="text-sm font-semibold text-primary py-2 border-b border-outline-variant/20">Como Funciona</a>
@@ -159,11 +137,11 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (Estrutura 2 Colunas no PC) -->
+    <!-- 2. HERO SECTION (Estrutura Grid Editorial 2 Colunas) -->
     <section class="hero-section">
         <div class="hero-container">
             
-            <!-- Coluna Esquerda: Copy, Headline Editorial, CTAs e Trust Badges (PC: Esquerda) -->
+            <!-- Coluna Esquerda: Copy, Headline Editorial, CTAs e Trust Badges -->
             <div class="hero-left-col">
                 
                 <!-- Badge de Localização -->
@@ -175,7 +153,7 @@
                 </div>
 
                 <!-- Headline Editorial Serif -->
-                <h1 class="hero-headline font-semibold">
+                <h1 class="hero-headline font-semibold mb-4">
                     Realce seus<br/>
                     traços sem<br/>
                     perder sua<br/>
@@ -233,7 +211,7 @@
 
             </div>
 
-            <!-- Coluna Direita: Fotografia Protagonista no Arco + Card Flutuante + Detalhe Botânico (PC: Direita) -->
+            <!-- Coluna Direita: Fotografia Protagonista no Arco + Card Flutuante + Detalhe Botânico -->
             <div class="hero-right-col">
                 <div class="hero-arch-container">
                     
@@ -244,7 +222,7 @@
 
                     <!-- Moldura Arqueada da Imagem -->
                     <div class="hero-arch-frame shadow-2xl">
-                        <img src="assets/images/dra-libia-hero.jpg" alt="Dra. Líbia Dias - Harmonização Facial e Corporal em Manaus" width="580" height="640" loading="eager"/>
+                        <img src="assets/images/dra-libia-hero.jpg" alt="Dra. Líbia Dias - Harmonização Facial e Corporal em Manaus" width="500" height="580" loading="eager"/>
                     </div>
 
                     <!-- Card Flutuante: Avaliação Personalizada -->
@@ -434,7 +412,7 @@
             </div>
 
             <!-- Grid de Procedimentos com Double-Bezel -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
                 <!-- 1. Toxina Botulínica (Botox) -->
                 <div class="proc-card visible-card double-bezel-card" data-category="facial">
@@ -620,7 +598,7 @@
                 </p>
 
                 <!-- Pilares de Atuação -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 pt-2">
                     <div class="p-4 rounded-2xl bg-surface-container border border-outline-variant/40">
                         <div class="flex items-center gap-2 mb-1">
                             <span class="material-symbols-outlined text-secondary text-lg" aria-hidden="true">medical_services</span>
