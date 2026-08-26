@@ -74,7 +74,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap" rel="stylesheet"/>
 
     <!-- Standalone Production Compiled CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css?v=5"/>
+    <link rel="stylesheet" href="assets/css/styles.css?v=6"/>
 
     <!-- Modular Production JavaScript -->
     <script src="assets/js/main.js" defer></script>
@@ -439,63 +439,188 @@
         </div>
     </section>
 
-    <!-- 3. COMO FUNCIONA (Sua Avaliação em 3 Passos) -->
-    <section id="como-funciona" class="py-24 px-6 md:px-12 bg-background relative z-10">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 max-w-2xl mx-auto">
-                <span class="text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Processo Transparente</span>
-                <h2 class="font-headline text-3xl md:text-4xl text-primary font-semibold mt-2 tracking-tight">
-                    Sua avaliação em 3 passos simples
+    <!-- 3. COMO FUNCIONA (Timeline Conectada 01 → 02 → 03 Fiel à Imagem) -->
+    <section id="como-funciona" class="steps-section">
+        
+        <!-- Detalhes Botânicos Vetoriais nas Extremidades -->
+        <svg class="absolute top-4 -left-4 w-36 h-36 pointer-events-none opacity-40 z-0" viewBox="0 0 100 100" fill="none" stroke="rgba(179, 138, 50, 0.45)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 15 C35 25 50 45 55 75 M15 15 C25 35 35 45 40 65 M28 32 C38 30 48 38 50 48 C42 50 32 42 28 32 Z M42 52 C52 50 62 58 64 68 C56 70 46 62 42 52 Z"/>
+        </svg>
+
+        <svg class="absolute -bottom-6 -right-6 w-44 h-44 pointer-events-none opacity-40 z-0" viewBox="0 0 100 100" fill="none" stroke="rgba(179, 138, 50, 0.45)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M85 85 C65 75 50 55 45 25 M85 85 C75 65 65 55 60 35 M72 68 C62 70 52 62 50 52 C58 50 68 58 72 68 Z M58 48 C48 50 38 42 36 32 C44 30 54 38 58 48 Z"/>
+        </svg>
+
+        <div class="ident-container">
+            
+            <!-- Topo Centralizado: Eyebrow, Headline, Divisor e Subheadline de Alta Conversão -->
+            <div class="text-center flex flex-col items-center">
+                
+                <!-- Eyebrow Pill -->
+                <div class="ident-eyebrow">
+                    <span class="text-[8px] leading-none text-[#B38A32]">◆</span>
+                    <span>PROCESSO TRANSPARENTE</span>
+                </div>
+
+                <!-- Headline Editorial Serif -->
+                <h2 class="ident-headline">
+                    Sua avaliação em<br/>
+                    <span class="highlight">3 passos simples.</span>
                 </h2>
-                <p class="text-on-surface-variant text-sm md:text-base mt-2">
-                    Sem pressão para fechar pacotes. Você entende tudo antes de tomar qualquer decisão.
+
+                <!-- Divisória Dourada Minimalista -->
+                <div class="ident-divider" aria-hidden="true">
+                    <span class="ident-divider-line"></span>
+                    <span class="ident-divider-dot">◆</span>
+                    <span class="ident-divider-line"></span>
+                </div>
+
+                <!-- Subheadline Focada na Objeção Real -->
+                <p class="ident-desc">
+                    Sem pressão para decidir na hora. Primeiro você entende as possibilidades, depois escolhe com tranquilidade.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+            <!-- Timeline Conectada: Linha Dourada + Cards 01, 02 e 03 -->
+            <div class="steps-timeline-wrap">
                 
-                <!-- Passo 1 -->
-                <div class="double-bezel-card">
-                    <div class="double-bezel-inner p-8 gap-4">
-                        <span class="font-headline text-4xl font-bold text-[#c5b358]">01</span>
-                        <h3 class="font-headline text-xl font-semibold text-primary">Primeiro Contato no WhatsApp</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Você clica no botão, conta brevemente o que gostaria de cuidar e nossa equipe agenda o melhor horário para sua visita no consultório.
-                        </p>
-                    </div>
+                <!-- Linha Conectora Dourada com Pontos (Apenas no Desktop) -->
+                <div class="steps-connector-line" aria-hidden="true">
+                    <span class="steps-connector-dot dot-1"></span>
+                    <span class="steps-connector-dot dot-2"></span>
                 </div>
 
-                <!-- Passo 2 -->
-                <div class="double-bezel-card">
-                    <div class="double-bezel-inner p-8 gap-4">
-                        <span class="font-headline text-4xl font-bold text-[#c5b358]">02</span>
-                        <h3 class="font-headline text-xl font-semibold text-primary">Consulta de Avaliação Presencial</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            A Dra. Líbia realiza uma análise detalhada da sua anatomia, histórico de saúde, formato facial e expectativas, respondendo a todas as suas dúvidas.
+                <!-- Grid dos 3 Passos -->
+                <div class="steps-cards-grid">
+                    
+                    <!-- PASSO 01: Primeiro Contato pelo WhatsApp -->
+                    <div class="step-card">
+                        <!-- Badge Numérico Dourado Centralizado no Topo -->
+                        <div class="step-card-num-badge">01</div>
+
+                        <!-- Círculo com Ícone WhatsApp SVG Minimalista -->
+                        <div class="step-icon-circle">
+                            <svg class="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="#B38A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M24 6 C14.06 6 6 14.06 6 24 C6 27.5 7.02 30.77 8.78 33.54 L6.5 41.5 L14.77 39.34 C17.43 40.98 20.6 42 24 42 C33.94 42 42 33.94 42 24 C42 14.06 33.94 6 24 6 Z"/>
+                                <path d="M18.5 17.5 C18 16.5 17.2 16.5 16.5 16.5 C15.8 16.5 15.2 16.8 14.8 17.5 C14.2 18.5 14 20 15 22 C16.5 25.5 20.5 30 25.5 31.5 C27.5 32 29 31.5 30 30.5 C30.8 29.8 31 29 31 28.2 C31 27.5 30.5 27 29.5 26.5 L26.5 25 C25.8 24.7 25.2 24.8 24.8 25.4 L23.5 27 C23 27.5 22.2 27.5 21.5 27 C19.5 25.8 18.2 24.5 17 22.5 C16.5 21.8 16.5 21 17 20.5 L18.5 19.2 C19 18.8 19 18.2 18.5 17.5 Z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Título -->
+                        <h3 class="step-card-title">
+                            Primeiro contato
+                            <span class="italic-gold">pelo WhatsApp</span>
+                        </h3>
+
+                        <!-- Texto Curto de Rápida Leitura -->
+                        <p class="step-card-desc">
+                            Conte brevemente o que gostaria de cuidar e alinhe a disponibilidade para sua avaliação.
                         </p>
                     </div>
+
+                    <!-- PASSO 02: Avaliação Presencial (Card Destaque / Elevação) -->
+                    <div class="step-card featured">
+                        <!-- Badge Numérico Dourado Centralizado no Topo -->
+                        <div class="step-card-num-badge">02</div>
+
+                        <!-- Círculo com Ícone de Avaliação Facial / Anatomia SVG -->
+                        <div class="step-icon-circle">
+                            <svg class="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="#B38A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M20 10 C25 8 31 11 32 17 C33 21 31 25 30 28 C31.5 31 31.5 36 28.5 40 C26 42 22 43 19 42"/>
+                                <path d="M20 10 C17.5 13 15 16 17 20 C18 21 20 22 20 23 C20 24.5 17 25.5 16.5 27 C15.8 28.5 17 30 18.5 31 C19.5 31 20 32 20 33 C19 34 17 34 17 35.5 C17 37 19.5 38 21 39 C21 41 20 42 19 42"/>
+                                <path d="M21 19 C22.5 19 23 20 23 21"/>
+                                <path d="M21 27 C22.5 27 24 28 24 28"/>
+                                <path d="M28 21 C29 22 29 25 27.5 26.5"/>
+                            </svg>
+                        </div>
+
+                        <!-- Título -->
+                        <h3 class="step-card-title">
+                            Avaliação
+                            <span class="italic-gold">presencial</span>
+                        </h3>
+
+                        <!-- Texto Curto de Rápida Leitura -->
+                        <p class="step-card-desc">
+                            A Dra. Líbia conhece seus objetivos, histórico e características individuais antes de indicar possibilidades.
+                        </p>
+                    </div>
+
+                    <!-- PASSO 03: Orientação Personalizada -->
+                    <div class="step-card">
+                        <!-- Badge Numérico Dourado Centralizado no Topo -->
+                        <div class="step-card-num-badge">03</div>
+
+                        <!-- Círculo com Ícone de Prancheta / Plano de Tratamento SVG -->
+                        <div class="step-icon-circle">
+                            <svg class="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="#B38A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M16 10 L12 10 C10.89 10 10 10.89 10 12 L10 40 C10 41.11 10.89 42 12 42 L30 42"/>
+                                <path d="M28 10 L32 10 C33.11 10 34 10.89 34 12 L34 26"/>
+                                <path d="M16 8 C16 6.89 16.89 6 18 6 L26 6 C27.11 6 28 6.89 28 8 L28 12 C28 13.11 27.11 14 26 14 L18 14 C16.89 14 16 13.11 16 12 Z"/>
+                                <path d="M16 20 L18 22 L24 16"/>
+                                <path d="M16 28 L18 30 L24 24"/>
+                                <circle cx="34" cy="34" r="6"/>
+                                <path d="M31.5 34 L33.5 36 L36.5 32"/>
+                            </svg>
+                        </div>
+
+                        <!-- Título -->
+                        <h3 class="step-card-title">
+                            Orientação
+                            <span class="italic-gold">personalizada</span>
+                        </h3>
+
+                        <!-- Texto Curto de Rápida Leitura -->
+                        <p class="step-card-desc">
+                            Você entende as opções, valores e próximos passos antes de decidir com segurança.
+                        </p>
+                    </div>
+
                 </div>
 
-                <!-- Passo 3 -->
-                <div class="double-bezel-card">
-                    <div class="double-bezel-inner p-8 gap-4">
-                        <span class="font-headline text-4xl font-bold text-[#c5b358]">03</span>
-                        <h3 class="font-headline text-xl font-semibold text-primary">Plano Sob Medida e Decisão Segura</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">
-                            Você recebe a indicação precisa dos protocolos ideais para o seu objetivo, valores claros e tempo estimado de resultados para decidir com tranquilidade.
-                        </p>
-                    </div>
-                </div>
             </div>
 
-            <div class="text-center mt-12">
-                <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20iniciar%20minha%20avalia%C3%A7%C3%A3o%20pelo%20WhatsApp." target="_blank" rel="noopener noreferrer" class="whatsapp-cta text-white pl-6 pr-2 py-2 rounded-full text-xs md:text-sm font-bold inline-flex items-center gap-3 group">
-                    <span>Quero começar meu atendimento pelo WhatsApp</span>
-                    <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 group-hover:translate-x-0.5 transition-transform" aria-hidden="true">
-                        <span class="material-symbols-outlined text-base">chat</span>
+            <!-- Callout Final Integrado: Conclusão Natural do Processo -->
+            <div class="ident-callout">
+                
+                <!-- Lado Esquerdo: Ícone de Calendário + Chamada -->
+                <div class="ident-callout-left">
+                    <div class="w-14 h-14 rounded-full bg-[#FAF2E3] flex items-center justify-center text-[#B38A32] flex-shrink-0 border border-[#D9BE7A]/30">
+                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="#B38A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="18" rx="3" ry="3"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                            <circle cx="16.5" cy="16.5" r="3.5" fill="#FAF2E3" stroke="#B38A32" stroke-width="1.5"/>
+                            <path d="M15 16.5 L16.2 17.5 L18 15.5" stroke="#B38A32" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="ident-callout-title">
+                        Pronta para dar o<br class="hidden sm:inline"/>
+                        primeiro passo?
+                    </div>
+                </div>
+
+                <!-- Divisória Vertical (Desktop) -->
+                <div class="ident-callout-divider" aria-hidden="true"></div>
+
+                <!-- Lado Direito: Botão Verde WhatsApp + Microcopy com Localização -->
+                <div class="ident-callout-right">
+                    <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20em%20Manaus." target="_blank" rel="noopener noreferrer" class="ident-callout-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.112.551 4.14 1.597 5.922l-1.697 6.322 6.467-1.697c1.724.965 3.69 1.453 5.633 1.453 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>WhatsApp • Quero agendar minha avaliação</span>
+                        <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+                    </a>
+                    <span class="ident-callout-micro flex items-center justify-center gap-1">
+                        <span class="material-symbols-outlined text-xs text-[#B38A32]" aria-hidden="true">location_on</span>
+                        <span>Atendimento no Centro Comercial Rio Jutaí • Manaus</span>
                     </span>
-                </a>
+                </div>
+
             </div>
+
         </div>
     </section>
 
