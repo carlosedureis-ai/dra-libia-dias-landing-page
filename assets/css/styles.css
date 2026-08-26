@@ -416,6 +416,13 @@ a {
   color: #2F241A;
 }
 
+#mobile-menu {
+  display: none;
+}
+#mobile-menu.open {
+  display: flex !important;
+}
+
 /* ==========================================================================
    HERO SECTION (Cores Originais: Fundo Creme, Tipografia Bodoni Moda, Arco e Card Flutuante)
    ========================================================================== */
