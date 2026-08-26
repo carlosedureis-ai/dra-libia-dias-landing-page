@@ -7,16 +7,17 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-    initHeaderScroll();
+    initFloatingHeader();
+    initMobileNav();
     initProcedureFilters();
     initFaqAccordion();
     initWhatsAppHelpers();
 });
 
 /**
- * 1. Header scroll visual effect with passive event listener for 60fps performance
+ * 1. Floating Header with dynamic subtle shadow on scroll
  */
-function initHeaderScroll() {
+function initFloatingHeader() {
     const header = document.getElementById("main-header");
     if (!header) return;
 
@@ -25,12 +26,10 @@ function initHeaderScroll() {
     window.addEventListener("scroll", () => {
         if (!ticking) {
             window.requestAnimationFrame(() => {
-                if (window.scrollY > 40) {
-                    header.classList.add("shadow-md", "py-2.5");
-                    header.classList.remove("py-3.5");
+                if (window.scrollY > 30) {
+                    header.classList.add("shadow-lg");
                 } else {
-                    header.classList.remove("shadow-md", "py-2.5");
-                    header.classList.add("py-3.5");
+                    header.classList.remove("shadow-lg");
                 }
                 ticking = false;
             });
@@ -40,7 +39,38 @@ function initHeaderScroll() {
 }
 
 /**
- * 2. Procedure category tab filtering with smooth transition
+ * 2. Mobile Navigation Toggle
+ */
+function initMobileNav() {
+    const toggleBtn = document.getElementById("mobile-menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    if (!toggleBtn || !menu) return;
+
+    toggleBtn.addEventListener("click", () => {
+        const isOpen = menu.classList.contains("open");
+        if (isOpen) {
+            menu.classList.remove("open");
+            toggleBtn.setAttribute("aria-expanded", "false");
+            toggleBtn.innerHTML = '<span class="material-symbols-outlined text-2xl text-primary" aria-hidden="true">menu</span>';
+        } else {
+            menu.classList.add("open");
+            toggleBtn.setAttribute("aria-expanded", "true");
+            toggleBtn.innerHTML = '<span class="material-symbols-outlined text-2xl text-primary" aria-hidden="true">close</span>';
+        }
+    });
+
+    // Close menu when clicking any link
+    menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("open");
+            toggleBtn.setAttribute("aria-expanded", "false");
+            toggleBtn.innerHTML = '<span class="material-symbols-outlined text-2xl text-primary" aria-hidden="true">menu</span>';
+        });
+    });
+}
+
+/**
+ * 3. Procedure category tab filtering with smooth transition
  */
 function initProcedureFilters() {
     const tabButtons = document.querySelectorAll(".proc-tab");
@@ -79,7 +109,7 @@ function initProcedureFilters() {
 }
 
 /**
- * 3. FAQ Accordion Toggle with ARIA state updates
+ * 4. FAQ Accordion Toggle with ARIA state updates
  */
 function initFaqAccordion() {
     const faqToggles = document.querySelectorAll(".faq-toggle");
@@ -108,7 +138,7 @@ function initFaqAccordion() {
 }
 
 /**
- * 4. WhatsApp Copy Helper & Universal Dispatcher
+ * 5. WhatsApp Copy Helper & Universal Dispatcher
  */
 function initWhatsAppHelpers() {
     const copyBtn = document.getElementById("btn-copy-phone");
