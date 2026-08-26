@@ -143,16 +143,28 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (Living Cascaded Keyframe Entrance) -->
+    <!-- 2. HERO SECTION (Foto da Doutora ao Fundo + Informações ao Lado) -->
     <section class="hero-section">
+        
+        <!-- Camada da Foto da Doutora Integrada ao Fundo (Direita / Centro) -->
+        <div class="hero-bg-layer" aria-hidden="true">
+            <div class="hero-bg-img-wrap">
+                <img src="assets/images/dra-libia-hero.jpg" alt="Dra. Líbia Dias - Harmonização Facial e Corporal em Manaus" class="hero-bg-img hero-enter-photo" width="820" height="640" loading="eager"/>
+                <!-- Gradientes Suaves de Fusão com o Fundo Creme -->
+                <div class="hero-bg-gradient-left"></div>
+                <div class="hero-bg-gradient-bottom"></div>
+                <div class="hero-bg-gradient-top"></div>
+            </div>
+        </div>
+
         <div class="hero-container">
             
-            <!-- Coluna Esquerda: Copy, Headline Editorial, CTAs e Trust Badges -->
-            <div class="hero-left-col">
+            <!-- Coluna de Conteúdo (Informações ao Lado em Primeiro Plano) -->
+            <div class="hero-content-col">
                 
                 <!-- Badge de Localização -->
                 <div class="flex items-center gap-2 mb-4 hero-enter-1">
-                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#F4EBDD]/70 border border-[#B38A32]/35 text-[11px] font-bold tracking-widest text-[#8C6B1F] uppercase">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#F4EBDD]/90 border border-[#B38A32]/35 text-[11px] font-bold tracking-widest text-[#8C6B1F] uppercase shadow-sm">
                         <span class="material-symbols-outlined text-xs text-[#B38A32]" aria-hidden="true">location_on</span>
                         MANAUS – AM
                     </span>
@@ -170,7 +182,7 @@
                 <div class="hero-divider mb-5 hero-enter-3" aria-hidden="true"></div>
 
                 <!-- Subheadline / Texto de Apoio -->
-                <p class="text-sm md:text-base text-on-surface-variant leading-relaxed max-w-[540px] mb-7 hero-enter-4">
+                <p class="text-sm md:text-base text-on-surface-variant leading-relaxed max-w-[520px] mb-7 hero-enter-4">
                     Protocolos personalizados de <strong class="font-semibold text-primary">Harmonização Facial</strong> e <strong class="font-semibold text-primary">Estética Corporal</strong> com atendimento exclusivo e acolhedor no Centro Comercial Rio Jutaí, em Manaus.
                 </p>
 
@@ -217,39 +229,18 @@
 
             </div>
 
-            <!-- Coluna Direita: Fotografia Protagonista no Arco + Card Flutuante + Detalhe Botânico -->
-            <div class="hero-right-col">
-                <div class="hero-arch-container">
-                    
-                    <!-- Linha Dourada de Contorno do Arco -->
-                    <div class="hero-arch-contour" aria-hidden="true">
-                        <div class="hero-arch-node"></div>
-                    </div>
-
-                    <!-- Moldura Arqueada da Imagem -->
-                    <div class="hero-arch-frame shadow-2xl hero-enter-photo">
-                        <img src="assets/images/dra-libia-hero.jpg" alt="Dra. Líbia Dias - Harmonização Facial e Corporal em Manaus" width="500" height="580" loading="eager"/>
-                    </div>
-
-                    <!-- Card Flutuante: Avaliação Personalizada -->
-                    <div class="hero-floating-card hero-enter-card">
-                        <div class="w-9 h-9 rounded-full bg-[#F4EBDD] border border-[#B38A32]/40 flex items-center justify-center mx-auto text-[#B38A32] shadow-sm">
-                            <span class="material-symbols-outlined text-lg" aria-hidden="true">person</span>
-                        </div>
-                        <div class="font-headline font-semibold text-xs md:text-sm text-[#2F241A] mt-2.5 leading-snug">
-                            Avaliação personalizada
-                        </div>
-                        <div class="w-8 h-[1px] bg-[#B38A32]/40 mx-auto my-2" aria-hidden="true"></div>
-                        <div class="text-[11px] font-semibold text-[#B38A32] tracking-wide">
-                            Manaus-AM
-                        </div>
-                    </div>
-
-                    <!-- Ilustração Botânica Linear Sutil -->
-                    <svg class="absolute -bottom-4 -right-4 w-36 h-36 pointer-events-none opacity-80 z-10" viewBox="0 0 100 100" fill="none" stroke="rgba(218, 190, 120, 0.65)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M70 95 C65 70 45 50 15 45 M70 95 C60 80 50 70 30 65 M55 78 C58 68 68 60 80 58 C68 55 60 45 58 35 C52 45 42 50 30 52 C42 55 50 65 55 78 Z M35 62 C38 52 48 48 58 46 C48 44 42 36 40 28 C34 36 26 40 16 42 C26 44 32 52 35 62 Z"/>
-                    </svg>
-
+            <!-- Card Flutuante de Destaque na Lateral Direita (Desktop) -->
+            <div class="hidden lg:flex hero-floating-badge hero-enter-card">
+                <div class="w-10 h-10 rounded-full bg-[#FAF2E3] border border-[#B38A32]/40 flex items-center justify-center flex-shrink-0 text-[#B38A32] shadow-sm">
+                    <span class="material-symbols-outlined text-xl" aria-hidden="true">spa</span>
+                </div>
+                <div class="flex flex-col text-left">
+                    <strong class="font-headline font-semibold text-xs text-[#2F241A] leading-tight">
+                        Avaliação Personalizada
+                    </strong>
+                    <span class="text-[11px] text-[#B38A32] font-semibold mt-0.5">
+                        Centro Comercial Rio Jutaí
+                    </span>
                 </div>
             </div>
 

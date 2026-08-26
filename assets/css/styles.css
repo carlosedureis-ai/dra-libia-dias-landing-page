@@ -401,40 +401,102 @@ a {
   display: none;
 }
 
+/* ==========================================================================
+   HERO SECTION (Foto da Doutora Atrás + Informações ao Lado)
+   ========================================================================== */
 .hero-section {
+  position: relative;
   width: 100%;
-  padding: 48px 24px 64px 24px;
+  min-height: 640px;
+  background: #FFF9F0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 56px 24px 72px 24px;
   box-sizing: border-box;
 }
 
+/* Camada da Foto da Doutora ao Fundo */
+.hero-bg-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 56%;
+  max-width: 820px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-bg-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0.92;
+}
+
+/* Gradientes Suaves de Fusão Editorial */
+.hero-bg-gradient-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 55%;
+  background: linear-gradient(to right, #FFF9F0 0%, rgba(255, 249, 240, 0.92) 35%, rgba(255, 249, 240, 0) 100%);
+}
+
+.hero-bg-gradient-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 25%;
+  background: linear-gradient(to top, #FFF9F0 0%, rgba(255, 249, 240, 0) 100%);
+}
+
+.hero-bg-gradient-top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 15%;
+  background: linear-gradient(to bottom, #FFF9F0 0%, rgba(255, 249, 240, 0) 100%);
+}
+
+/* Informações da Hero em Primeiro Plano ao Lado */
 .hero-container {
+  position: relative;
+  z-index: 10;
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  width: 100%;
+  display: flex;
   align-items: center;
-  gap: 48px;
+  justify-content: space-between;
   box-sizing: border-box;
 }
 
-.hero-left-col {
+.hero-content-col {
+  max-width: 580px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
 }
 
-.hero-right-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 .hero-headline {
   font-family: 'Bodoni Moda', Georgia, serif;
-  font-size: clamp(2.8rem, 4.2vw, 5.2rem);
-  line-height: 0.96;
+  font-size: clamp(2.7rem, 4.2vw, 4.8rem);
+  line-height: 0.98;
   letter-spacing: -0.025em;
   color: #2F241A;
   text-align: left;
@@ -482,7 +544,8 @@ a {
 /* Secondary Gold Pill CTA */
 .btn-cta-secondary {
   border: 1px solid rgba(179, 138, 50, 0.4);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
   color: #2F241A;
   padding: 0.85rem 1.6rem;
   border-radius: 9999px;
@@ -497,7 +560,7 @@ a {
   transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s var(--ease-spring);
 }
 .btn-cta-secondary:hover {
-  background-color: rgba(244, 235, 221, 0.75);
+  background-color: rgba(244, 235, 221, 0.9);
   border-color: rgba(179, 138, 50, 0.7);
   transform: translateY(-2px);
 }
@@ -507,7 +570,9 @@ a {
 
 /* Hero Trust Badges Container */
 .hero-trust-container {
-  background: #F8F1E5;
+  background: rgba(248, 241, 229, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(217, 190, 122, 0.5);
   border-radius: 20px;
   padding: 0.75rem 1.5rem;
@@ -518,70 +583,36 @@ a {
   max-width: 480px;
 }
 
-/* Hero Arch & Photo Architecture */
-.hero-arch-container {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  height: 580px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.hero-arch-frame {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 300px 300px 0 0;
-  overflow: hidden;
-  background: #f4ebdd;
-}
-
-.hero-arch-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom center;
-}
-
-.hero-arch-contour {
-  position: absolute;
-  top: -12px;
-  left: -12px;
-  right: -12px;
-  bottom: 0;
-  border-radius: 312px 312px 0 0;
-  border: 1px solid rgba(179, 138, 50, 0.45);
-  pointer-events: none;
-}
-
-.hero-arch-node {
-  position: absolute;
-  left: -4px;
-  top: 50%;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #B38A32;
-}
-
-/* Floating Card on Right */
-.hero-floating-card {
-  position: absolute;
-  top: 22%;
-  right: -8px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+/* Floating Card Hero Highlight */
+.hero-floating-badge {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid #EADFC7;
   border-radius: 22px;
-  padding: 1.25rem 1.1rem;
-  width: 180px;
-  text-align: center;
+  padding: 1.1rem 1.4rem;
   box-shadow: 0 16px 36px -8px rgba(47, 36, 26, 0.12);
-  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 260px;
 }
+
+@media (max-width: 900px) {
+  .hero-section {
+    min-height: auto;
+    padding: 36px 20px 48px 20px;
+  }
+  .hero-bg-layer {
+    width: 100%;
+    opacity: 0.22;
+  }
+  .hero-bg-gradient-left {
+    width: 100%;
+    background: linear-gradient(to right, #FFF9F0 0%, rgba(255, 249, 240, 0.85) 60%, rgba(255, 249, 240, 0.3) 100%);
+  }
+}
+
 
 /* ==========================================================================
    10. SEÇÃO IDENTIFICAÇÃO & SEÇÃO COMO FUNCIONA (Estilo Editorial Fiel)
