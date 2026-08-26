@@ -74,7 +74,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap" rel="stylesheet"/>
 
     <!-- Standalone Production Compiled CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css?v=4"/>
+    <link rel="stylesheet" href="assets/css/styles.css?v=5"/>
 
     <!-- Modular Production JavaScript -->
     <script src="assets/js/main.js" defer></script>
@@ -250,79 +250,192 @@
         </div>
     </section>
 
-    <!-- 2. SEÇÃO DE IDENTIFICAÇÃO ("O que você gostaria de cuidar?") -->
-    <section id="identificacao" class="py-24 px-6 md:px-12 bg-surface-container relative z-10 border-y border-outline-variant/30">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-14 max-w-2xl mx-auto">
-                <span class="text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Diagnóstico &amp; Desejo</span>
-                <h2 class="font-headline text-3xl md:text-4xl text-primary font-semibold mt-2 tracking-tight">
-                    O que você gostaria de cuidar sem perder sua essência?
+    <!-- 2. SEÇÃO DE IDENTIFICAÇÃO (Implementação Fiel à Referência Visual) -->
+    <section id="identificacao" class="ident-section">
+        
+        <!-- Detalhes Botânicos Vetoriais nas Extremidades -->
+        <svg class="absolute top-4 -left-4 w-36 h-36 pointer-events-none opacity-40 z-0" viewBox="0 0 100 100" fill="none" stroke="rgba(179, 138, 50, 0.45)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 15 C35 25 50 45 55 75 M15 15 C25 35 35 45 40 65 M28 32 C38 30 48 38 50 48 C42 50 32 42 28 32 Z M42 52 C52 50 62 58 64 68 C56 70 46 62 42 52 Z"/>
+        </svg>
+
+        <svg class="absolute -bottom-6 -right-6 w-44 h-44 pointer-events-none opacity-40 z-0" viewBox="0 0 100 100" fill="none" stroke="rgba(179, 138, 50, 0.45)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M85 85 C65 75 50 55 45 25 M85 85 C75 65 65 55 60 35 M72 68 C62 70 52 62 50 52 C58 50 68 58 72 68 Z M58 48 C48 50 38 42 36 32 C44 30 54 38 58 48 Z"/>
+        </svg>
+
+        <div class="ident-container">
+            
+            <!-- Topo Centralizado: Eyebrow, Headline, Divisor e Subtexto -->
+            <div class="text-center flex flex-col items-center">
+                
+                <!-- Eyebrow Pill -->
+                <div class="ident-eyebrow">
+                    <span class="text-[8px] leading-none text-[#B38A32]">◆</span>
+                    <span>DIAGNÓSTICO &amp; DESEJO</span>
+                </div>
+
+                <!-- Headline Principal com Destaque Dourado Itálico -->
+                <h2 class="ident-headline">
+                    O que você gostaria de cuidar<br/>
+                    sem perder <span class="highlight">sua essência?</span>
                 </h2>
-                <p class="text-on-surface-variant text-sm md:text-base mt-2">
-                    Cada pessoa possui necessidades únicas. Veja qual destas frentes mais se alinha ao seu momento:
+
+                <!-- Divisória Dourada Minimalista com Detalhe Central -->
+                <div class="ident-divider" aria-hidden="true">
+                    <span class="ident-divider-line"></span>
+                    <span class="ident-divider-dot">◆</span>
+                    <span class="ident-divider-line"></span>
+                </div>
+
+                <!-- Texto de Apoio Centralizado -->
+                <p class="ident-desc">
+                    Cada pessoa possui necessidades únicas. Escolha a área que mais combina com o que você deseja transformar com leveza e naturalidade.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Grid dos 3 Cards de Identificação -->
+            <div class="ident-cards-grid">
                 
-                <!-- Card Identificação 1 -->
-                <div class="double-bezel-card">
-                    <div class="double-bezel-inner p-8 gap-6">
-                        <div class="flex flex-col gap-3">
-                            <div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-primary mb-2">
-                                <span class="material-symbols-outlined text-2xl text-secondary" aria-hidden="true">face_retouching_natural</span>
-                            </div>
-                            <h3 class="font-headline text-2xl text-primary font-semibold">Harmonia &amp; Traços Faciais</h3>
-                            <p class="text-on-surface-variant text-sm leading-relaxed">
-                                Para quem se incomoda com linhas de expressão, perda de sustentação ou deseja valorizar lábios e contornos mantendo um aspecto leve, descansado e sem exageros.
-                            </p>
-                        </div>
-                        <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20conversar%20sobre%20Harmoniza%C3%A7%C3%A3o%20Facial." target="_blank" rel="noopener noreferrer" class="text-primary font-bold text-xs uppercase tracking-wider hover:text-secondary-accent transition-colors flex items-center justify-between pt-4 border-t border-outline-variant/30 group">
-                            <span>Conversar sobre meu rosto</span>
-                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
-                        </a>
+                <!-- CARD 01: Harmonia & Traços Faciais -->
+                <div class="ident-card">
+                    <!-- Número no Topo Esquerdo -->
+                    <div class="ident-card-num">01</div>
+
+                    <!-- Container Circular com Ícone de Perfil Feminino Minimalista -->
+                    <div class="ident-icon-circle">
+                        <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" stroke="#B38A32" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M26 14 C33 11 41 15 42 23 C43 28 41 33 40 37 C42 41 42 47 38 52 C35 55 30 57 26 56"/>
+                            <path d="M26 14 C23 18 20 22 23 27 C24 28 27 29 27 30 C27 32 23 33 22 35 C21 37 23 39 25 40 C26 40 27 41 27 42 C26 43 23 43 23 45 C23 47 26 48 28 49 C28 53 27 55 26 56"/>
+                            <path d="M28 26 C30 26 31 27 31 28"/>
+                            <path d="M28 36 C30 36 32 37 32 37"/>
+                            <path d="M37 28 C38 29 38 33 36 35"/>
+                        </svg>
                     </div>
+
+                    <!-- Título -->
+                    <h3 class="ident-card-title">
+                        Harmonia &amp; Traços
+                        <span class="italic-gold">Faciais</span>
+                    </h3>
+
+                    <!-- Descrição -->
+                    <p class="ident-card-desc">
+                        Realce seus traços, melhore contornos e promova equilíbrio facial com resultados naturais e personalizados.
+                    </p>
+
+                    <!-- CTA Outline -->
+                    <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20conversar%20sobre%20Harmoniza%C3%A7%C3%A3o%20Facial." target="_blank" rel="noopener noreferrer" class="ident-btn-outline">
+                        <span>Conversar sobre rosto</span>
+                        <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+                    </a>
                 </div>
 
-                <!-- Card Identificação 2 -->
-                <div class="double-bezel-card">
-                    <div class="double-bezel-inner p-8 gap-6">
-                        <div class="flex flex-col gap-3">
-                            <div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-primary mb-2">
-                                <span class="material-symbols-outlined text-2xl text-secondary" aria-hidden="true">accessibility_new</span>
-                            </div>
-                            <h3 class="font-headline text-2xl text-primary font-semibold">Contorno &amp; Gordura Localizada</h3>
-                            <p class="text-on-surface-variant text-sm leading-relaxed">
-                                Para quem se incomoda com áreas específicas — como papada, flancos ou abdômen — e busca redução de medidas e firmeza tecidual sem cirurgia invasiva.
-                            </p>
-                        </div>
-                        <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20conversar%20sobre%20tratamentos%20de%20Contorno%20Corporal%20e%20Papada." target="_blank" rel="noopener noreferrer" class="text-primary font-bold text-xs uppercase tracking-wider hover:text-secondary-accent transition-colors flex items-center justify-between pt-4 border-t border-outline-variant/30 group">
-                            <span>Conversar sobre meu corpo</span>
-                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
-                        </a>
+                <!-- CARD 02: Contorno & Gordura Localizada (Card Destaque) -->
+                <div class="ident-card featured">
+                    <!-- Número no Topo Esquerdo -->
+                    <div class="ident-card-num">02</div>
+
+                    <!-- Container Circular com Ícone de Silhueta Corporal Minimalista -->
+                    <div class="ident-icon-circle">
+                        <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" stroke="#B38A32" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M22 18 C26 26 22 34 20 44 C19 49 22 52 24 54"/>
+                            <path d="M42 18 C38 26 42 34 44 44 C45 49 42 52 40 54"/>
+                            <path d="M22 38 C28 41 36 41 42 38"/>
+                            <path d="M24 39 C27 48 37 48 40 39"/>
+                            <path d="M32 43 L32 47"/>
+                            <path d="M19 24 L21 21 M21 21 L24 22 M21 21 C17 25 17 28 17 28"/>
+                            <path d="M45 24 L43 21 M43 21 L40 22 M43 21 C47 25 47 28 47 28"/>
+                        </svg>
                     </div>
+
+                    <!-- Título -->
+                    <h3 class="ident-card-title">
+                        Contorno &amp; Gordura
+                        <span class="italic-gold">Localizada</span>
+                    </h3>
+
+                    <!-- Descrição -->
+                    <p class="ident-card-desc">
+                        Tratamentos corporais que ajudam a reduzir medidas, definir contornos e valorizar sua melhor versão.
+                    </p>
+
+                    <!-- CTA Preenchido Dourado com Sombra -->
+                    <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20conversar%20sobre%20tratamentos%20de%20Contorno%20Corporal%20e%20Papada." target="_blank" rel="noopener noreferrer" class="ident-btn-filled">
+                        <span>Conversar sobre corpo</span>
+                        <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+                    </a>
                 </div>
 
-                <!-- Card Identificação 3 -->
-                <div class="double-bezel-card">
-                    <div class="double-bezel-inner p-8 gap-6">
-                        <div class="flex flex-col gap-3">
-                            <div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-primary mb-2">
-                                <span class="material-symbols-outlined text-2xl text-secondary" aria-hidden="true">vital_signs</span>
-                            </div>
-                            <h3 class="font-headline text-2xl text-primary font-semibold">Vitalidade, Pele &amp; Bem-estar</h3>
-                            <p class="text-on-surface-variant text-sm leading-relaxed">
-                                Para quem deseja revigorar a imunidade, energia e hidratação celular de dentro para fora através da reposição endovenosa de nutrientes e bioestímulo de colágeno.
-                            </p>
-                        </div>
-                        <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20conversar%20sobre%20Soroterapia%20e%20Bem-estar." target="_blank" rel="noopener noreferrer" class="text-primary font-bold text-xs uppercase tracking-wider hover:text-secondary-accent transition-colors flex items-center justify-between pt-4 border-t border-outline-variant/30 group">
-                            <span>Conversar sobre vitalidade</span>
-                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
-                        </a>
+                <!-- CARD 03: Vitalidade, Pele & Bem-estar -->
+                <div class="ident-card">
+                    <!-- Número no Topo Esquerdo -->
+                    <div class="ident-card-num">03</div>
+
+                    <!-- Container Circular com Ícone de Gota/Pele e Bem-estar -->
+                    <div class="ident-icon-circle">
+                        <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none" stroke="#B38A32" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M32 15 C32 15 22 28 22 36 C22 42 26.5 46 32 46 C37.5 46 42 42 42 36 C42 28 32 15 32 15 Z"/>
+                            <path d="M16 48 C20 46 24 46 28 48 C32 50 36 50 40 48 C44 46 48 46 52 48"/>
+                            <path d="M20 54 C24 52 28 52 32 54 C36 56 40 56 44 54"/>
+                        </svg>
                     </div>
+
+                    <!-- Título -->
+                    <h3 class="ident-card-title">
+                        Vitalidade, Pele &amp;
+                        <span class="italic-gold">Bem-estar</span>
+                    </h3>
+
+                    <!-- Descrição -->
+                    <p class="ident-card-desc">
+                        Protocolos voltados para cuidados com a pele, vitalidade e bem-estar no dia a dia.
+                    </p>
+
+                    <!-- CTA Outline -->
+                    <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20conversar%20sobre%20Soroterapia%20e%20Bem-estar." target="_blank" rel="noopener noreferrer" class="ident-btn-outline">
+                        <span>Conversar sobre vitalidade</span>
+                        <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+                    </a>
                 </div>
 
             </div>
+
+            <!-- Callout Horizontal Final -->
+            <div class="ident-callout">
+                
+                <!-- Lado Esquerdo: Ícone de Pergunta + Pergunta Editorial -->
+                <div class="ident-callout-left">
+                    <div class="w-14 h-14 rounded-full bg-[#FAF2E3] flex items-center justify-center text-[#B38A32] flex-shrink-0 border border-[#D9BE7A]/30">
+                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="#B38A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <div class="ident-callout-title">
+                        Não sabe qual caminho faz<br class="hidden sm:inline"/>
+                        mais sentido para você?
+                    </div>
+                </div>
+
+                <!-- Divisória Vertical (Desktop) -->
+                <div class="ident-callout-divider" aria-hidden="true"></div>
+
+                <!-- Lado Direito: Botão Verde WhatsApp + Microcopy -->
+                <div class="ident-callout-right">
+                    <a href="https://api.whatsapp.com/send?phone=5592992191806&text=Ol%C3%A1%2C%20Dra.%20L%C3%ADbia!%20Gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20personalizada." target="_blank" rel="noopener noreferrer" class="ident-callout-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.112.551 4.14 1.597 5.922l-1.697 6.322 6.467-1.697c1.724.965 3.69 1.453 5.633 1.453 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>Quero uma avaliação personalizada</span>
+                        <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+                    </a>
+                    <span class="ident-callout-micro">
+                        Vamos entender seus objetivos e orientar você sobre as possibilidades de atendimento.
+                    </span>
+                </div>
+
+            </div>
+
         </div>
     </section>
 
@@ -412,7 +525,7 @@
             </div>
 
             <!-- Grid de Procedimentos com Double-Bezel -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- 1. Toxina Botulínica (Botox) -->
                 <div class="proc-card visible-card double-bezel-card" data-category="facial">
@@ -598,7 +711,7 @@
                 </p>
 
                 <!-- Pilares de Atuação -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 pt-2">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
                     <div class="p-4 rounded-2xl bg-surface-container border border-outline-variant/40">
                         <div class="flex items-center gap-2 mb-1">
                             <span class="material-symbols-outlined text-secondary text-lg" aria-hidden="true">medical_services</span>
