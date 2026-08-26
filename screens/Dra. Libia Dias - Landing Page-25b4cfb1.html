@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dra. Libia Dias - Harmonização Facial e Corporal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#f7e382",
+                        "tertiary-container": "#3f413e",
+                        "on-surface": "#1e1b13",
+                        "primary-fixed": "#f2e0cb",
+                        "surface-container": "#f5ede0",
+                        "primary": "#33291b",
+                        "on-surface-variant": "#4c463e",
+                        "surface": "#fff8ef",
+                        "tertiary-fixed": "#e3e3de",
+                        "surface-container-high": "#efe7da",
+                        "on-secondary-container": "#73640e",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#e0d9cc",
+                        "surface-container-low": "#faf3e5",
+                        "secondary-container": "#f7e382",
+                        "primary-container": "#4a3f30",
+                        "error": "#ba1a1a",
+                        "background": "#fff8ef",
+                        "surface-container-highest": "#e9e2d4",
+                        "on-tertiary-fixed": "#1a1c19",
+                        "primary-fixed-dim": "#d5c4b0",
+                        "on-secondary-fixed": "#211b00",
+                        "inverse-on-surface": "#f7f0e2",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "on-background": "#1e1b13",
+                        "on-tertiary-container": "#acada8",
+                        "secondary": "#6c5e06",
+                        "outline-variant": "#cfc5ba",
+                        "tertiary": "#292b28",
+                        "tertiary-fixed-dim": "#c6c7c2",
+                        "secondary-fixed-dim": "#dac769",
+                        "inverse-primary": "#d5c4b0",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#7e766d",
+                        "on-primary-container": "#baaa97",
+                        "on-primary-fixed-variant": "#504536",
+                        "on-primary-fixed": "#231a0d",
+                        "surface-tint": "#695c4c",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fff8ef",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#524700",
+                        "inverse-surface": "#333027",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e9e2d4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "margin-desktop": "80px",
+                        "section-gap": "64px",
+                        "stack-md": "16px",
+                        "gutter": "16px",
+                        "margin-mobile": "24px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Bodoni Moda"],
+                        "body-md": ["Manrope"],
+                        "headline-xl": ["Bodoni Moda"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "label-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-sm": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 40px -10px rgba(74, 63, 48, 0.08);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+<!-- Header Predicted Component (Modified for Landing Page Intent - Hide Nav logic but keep brand anchor) -->
+<header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md no-border flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 transition-all duration-300" id="main-header">
+<div class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-widest text-primary font-bold">DRA. LIBIA DIAS</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary scale-95 active:scale-90 transition-transform cursor-pointer hidden md:block">spa</span>
+<a class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-label-md text-label-md hover:opacity-90 transition-opacity" href="#agendar">Agendar</a>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="pt-28 pb-section-gap px-margin-mobile md:px-margin-desktop min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-stack-lg relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-low to-background z-[-1]"></div>
+<div class="w-full md:w-1/2 flex flex-col items-start gap-stack-md z-10">
+<h1 class="font-headline-xl text-headline-xl text-primary leading-tight">Harmonização Facial e Corporal</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Tudo com foco em naturalidade. Realce sua beleza de forma autêntica e sofisticada, com protocolos exclusivos.</p>
+<a class="mt-stack-sm bg-primary-container text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:opacity-90 transition-opacity shadow-lg shadow-primary-container/20 flex items-center gap-2" href="#agendar">
+                Quero agendar minha avaliação
+                <span class="material-symbols-outlined text-on-primary">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-1/2 relative mt-8 md:mt-0">
+<div class="aspect-[4/5] w-full max-w-md mx-auto rounded-t-full rounded-b-[2rem] overflow-hidden editorial-shadow relative z-10 border-4 border-surface-container-lowest">
+<img alt="Dra. Libia Dias" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLtXLm_ZeK3-4iJl5BFixdaRjjXFVg-82F3pvP5YYVZQtaYvsPq9cfrpjuytdxyvJmZa4kIpvU9P4kYYCF5YrNMEiz_69X-Jyz5TEJj68eOTqDbuWNWlS8wjlMbPmGOdxJyFgaE-XEGk1D30O7cJ_XmNb8zs3kQbieUeArLkW52WrEo8knv0pOLMchNjfSPm3h-JtJMhNOnaluuuFcAbOrS7KrNj3bFAnFarYRbjL789zPWtn5emb5zyzhj0OTGNx2Jg"/>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-10 -right-4 w-32 h-32 bg-secondary-fixed-dim/20 rounded-full blur-2xl z-0"></div>
+<div class="absolute -bottom-6 -left-6 w-40 h-40 bg-primary-fixed-dim/30 rounded-full blur-2xl z-0"></div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container flex flex-col md:flex-row items-center gap-stack-lg">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<div class="aspect-square w-full max-w-sm mx-auto rounded-[2rem] overflow-hidden editorial-shadow">
+<img alt="Dra. Libia Dias em atendimento" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-d1cwS0aZ8TmBC9QIL242WsO-I9xdjlezXEvxtCB67W68Q9THWxLYZxQMc9ShfjUszXyzEx_2vN3Fz_q6cdysgSatIGHLJCp-lkoWdUJorieZ6pr7eLgf7q-dSkF3tG44kuypMd-of7vLyR1WIL0bDxeNeb28JMOLD-0rvYoARcM11eOfO95SQDPTs24Hdo-vMRp2HlPbDxaqkDh7SOadw064DPNZ4Bk2b3ec_fXt1noCSVWzdrLv9vI5S47iC3e6jg"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2 flex flex-col gap-stack-md">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Sobre Mim</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Servir com amor é minha missão</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Como enfermeira esteta, acredito que o cuidado vai além da técnica. Meu objetivo é proporcionar uma experiência única, acolhedora e altamente personalizada para cada paciente.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Com anos de dedicação e estudo contínuo, busco os melhores protocolos para garantir resultados naturais e seguros, respeitando a sua individualidade e realçando o que você tem de melhor.</p>
+<div class="mt-4 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Especialista em Harmonização</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Atendimento Personalizado</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Procedures Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background">
+<div class="text-center mb-stack-lg flex flex-col items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Especialidades</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Procedimentos em Destaque</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg max-w-5xl mx-auto">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl editorial-shadow overflow-hidden flex flex-col group">
+<div class="h-64 relative overflow-hidden bg-surface-container flex items-center justify-center p-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, minimalist flat lay of high-end cosmetic injection tools on a pristine beige background. Soft, diffused lighting creates a premium, clinical yet inviting atmosphere. The composition is elegant and balanced, focusing on the precision of aesthetic procedures with subtle hints of gold and neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB84wEysjtFDJtMdIP8uGIymf_H7LBRLAbYv41w-zUJPS2LcwyI48W9EMcXoZjkUrooTrpUqZXpGBsveJ4k0NQnSSNxvStFmT9GdpImcfsM-7SO3-ifW9hbNU7OmE1bbFurkTcWiL6qOmty4WOIEiqVka0I-p-JJ2R-UFXQmCY1llb1TWwNRgNEABi-1PZWtIjpsXLpt_1xwjCmOvzDPwUX4gxda0LcJS-ET-_OW-XIf22drwO00Lcc"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Lipoenzimática</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Tratamento minimamente invasivo focado na redução de gordura localizada, melhorando o contorno corporal de forma segura e eficaz.</p>
+<a class="mt-4 border border-outline text-primary px-6 py-3 rounded-full font-label-md text-label-md text-center hover:bg-surface-container transition-colors" href="#agendar">Agendar avaliação</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl editorial-shadow overflow-hidden flex flex-col group">
+<div class="h-64 relative overflow-hidden">
+<img alt="Ampolas de Soroterapia" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE_xhxSPbkTu61RdbZnKIHnpapWfKMx6XxhF1p9TLurWAFH3D63xo-FXOlFW-hoc8r9Ps4lOpEpPhJzIijvnkCmSMXqFJrbS-FQmofPzt0VdVmXqKTpdZ_kEQFFoL6P9fmv3-bM-ifUf9BD6CvnUZtH3hPK7UWrQy6JIkemP2zXcAQM_rEqQELBFy2VLvhuc8fseimo4ElNts3B1L1SG-7ry8nFIc8VdiB9golyLt2XoQTpDpMftdC-uOqZnoVvouQ-w"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Soroterapia</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Reposição de vitaminas, minerais e antioxidantes diretamente na corrente sanguínea, promovendo vitalidade, energia e saúde de dentro para fora.</p>
+<a class="mt-4 border border-outline text-primary px-6 py-3 rounded-full font-label-md text-label-md text-center hover:bg-surface-container transition-colors" href="#agendar">Agendar avaliação</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-highest">
+<div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-stack-md">
+<div class="w-16 h-16 bg-surface-container-lowest rounded-full flex items-center justify-center editorial-shadow mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Nosso Espaço</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto">Um ambiente preparado com muito carinho para receber você com conforto e sofisticação.</p>
+<address class="not-italic font-body-md text-body-md text-on-surface bg-surface-container-lowest px-6 py-4 rounded-xl mt-4 editorial-shadow inline-block">
+                Centro Comercial Rio Jutaí<br/>
+                R. Rio Jutaí, 43, Nossa Sra. das Graças<br/>
+                Manaus - AM, 69053-020
+            </address>
+<a class="mt-2 text-secondary font-label-md text-label-md hover:underline flex items-center gap-1" href="https://maps.google.com" target="_blank">
+                Ver no mapa <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background">
+<div class="text-center mb-stack-lg">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Experiências</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-2">O que dizem nossas pacientes</h2>
+</div>
+<div class="flex overflow-x-auto pb-8 snap-x snap-mandatory gap-6 no-scrollbar" style="scroll-behavior: smooth;">
+<!-- Testimonial 1 -->
+<div class="min-w-[85%] md:min-w-[400px] bg-surface-container rounded-[2rem] p-8 snap-center flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="A close-up portrait of a smiling woman with clear, glowing skin. She has a natural, relaxed expression, conveying satisfaction and confidence. The lighting is soft and flattering, highlighting her healthy complexion against a neutral beige background. Editorial style photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt9ApDhjWTKU9kYYrZhorGxoYEN5zxZHSXxJUMbqQMpPOCpR1vhI7EuYrKbJUFAPLGF08E_QJNrUmzFGXU9-ICSu3jKFoTo6NRBk1c4GJlhqUI2CCzuk6rXUoE5Voub-0ligEqJWBypiP1nkTnRgLH72mDQGP8rBA5eABXQGXYN0w1lSk2VPqZe0gKIfy7cVNrIwb3fXhjZnsUwdNi9OD2X6bfiixhG3q1eqL5dl_ie8Ibvz_EWbb0"/>
+<div>
+<h4 class="font-label-md text-label-md text-primary">Mariana S.</h4>
+<div class="flex text-secondary-fixed-dim text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"O atendimento da Dra. Libia é excepcional. Ela me passou muita segurança desde a primeira consulta e o resultado foi super natural, exatamente como eu queria."</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="min-w-[85%] md:min-w-[400px] bg-surface-container rounded-[2rem] p-8 snap-center flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="A portrait of an elegant mature woman smiling warmly. She exudes grace and well-being. Her skin looks hydrated and well-cared for. The setting is minimal, with soft, warm lighting that emphasizes a natural aesthetic and subtle beauty enhancements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuNWgC7sXe8ey20mVpPUzAZsXm11jQruh0uOuhmHFc2kM4opqR7_sGYc_D2lRntooQoMGwhQBR4FtGvSJLv7gTxqsh7FeXLL-3C8C9_vwNT5_LVVPYIRn4gEVZhGjLdu7vCsxiIBkoMu9uQAqXfs3eLpCrJQOxrnDNuZ083Dz82HUf9WhlNukaRutYNSdBfKLExsdmyQyhdGYbhdeIX4KJ9N7KNsnwW5HAcjJf9KtGFnOqIzyjHLQM"/>
+<div>
+<h4 class="font-label-md text-label-md text-primary">Juliana F.</h4>
+<div class="flex text-secondary-fixed-dim text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"Amei a experiência com a soroterapia. Senti uma diferença enorme na minha energia. O espaço é lindo e muito acolhedor."</p>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-primary-container text-on-primary text-center flex flex-col items-center gap-stack-md rounded-t-[3rem] mt-8 relative overflow-hidden" id="agendar">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<!-- Subtle pattern overlay could go here -->
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl z-10">Pronta para realçar sua melhor versão?</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-lg z-10">Agende sua avaliação e descubra o protocolo ideal para suas necessidades.</p>
+<button class="mt-stack-sm bg-surface text-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-surface-container transition-colors shadow-lg z-10 flex items-center gap-2">
+            Quero agendar minha avaliação
+            <span class="material-symbols-outlined text-primary">calendar_month</span>
+</button>
+<div class="mt-stack-lg flex flex-col items-center gap-2 z-10">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-widest">Credenciais</span>
+<span class="font-body-md text-body-md text-on-primary">COREN AM 000.574.129</span>
+<span class="font-body-md text-body-md text-on-primary opacity-80 text-sm">Mais de 5 anos de experiência em saúde estética.</span>
+</div>
+</section>
+<!-- Footer Predicted Component -->
+<footer class="bg-surface-container-highest flex flex-col items-center gap-stack-lg px-margin-mobile md:px-margin-desktop py-stack-lg w-full no-border flat no shadows text-center">
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-primary">DRA. LIBIA DIAS</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Termos de Uso</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Política de Privacidade</a>
+<a class="font-label-sm text-label-sm text-secondary font-bold hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#agendar">Agendar Consulta</a>
+</div>
+<div class="font-body-md text-body-md text-primary opacity-80 text-sm max-w-md text-center border-t border-outline-variant/30 pt-6 mt-4 w-full">
+            © 2024 Dra. Libia Dias - Enfermeira Esteta. Todos os direitos reservados. COREN-AM Ativo.
+        </div>
+</footer>
+<style>
+        /* Hide scrollbar for carousel but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script>
+        // Simple header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm', 'bg-background/95');
+                header.classList.remove('bg-background/90');
+            } else {
+                header.classList.remove('shadow-sm', 'bg-background/95');
+                header.classList.add('bg-background/90');
+            }
+        });
+    </script>
+</body></html>

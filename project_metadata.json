@@ -1,0 +1,188 @@
+﻿{
+    "name":  "projects/7081342922175185559",
+    "title":  "Dra. Libia Dias Landing Page",
+    "visibility":  "PRIVATE",
+    "createTime":  "2026-08-26T18:06:09.691567Z",
+    "updateTime":  "2026-08-26T18:19:13.601871Z",
+    "projectType":  "TEXT_TO_UI_PRO",
+    "thumbnailScreenshot":  {
+                                "name":  "projects/7081342922175185559/screens/25b4cfb19daf44ecb9717c20f6e51377/fileEntries/screenshot",
+                                "downloadUrl":  "https://lh3.googleusercontent.com/aida/AEtjO1UKPDt3fP91BHzYa1hbG_UHK4aXQIqoaFRL7WRnRuHCsXc8rtiugb9aPuZIl8Q0dkFHjeN8qNLMcYVxqAvCD132YsmZwbEI-iqYllHVTrnbTqH0uumCMX5z0VPPG4XNtC758ifChrWrkUwxn0XGSpoRtEkZfXr_7OAiHSs_g4jiSV5FHvoz1qylPKfxlOSLqiX6WqvmVSMqVVRSE3ZKl3f8RXPO_tqbQxeHn84UbcX-t5GCQY-Osqgt0DA"
+                            },
+    "origin":  "STITCH",
+    "deviceType":  "MOBILE",
+    "designTheme":  {
+                        "colorMode":  "LIGHT",
+                        "font":  "BODONI_MODA",
+                        "roundness":  "ROUND_FOUR",
+                        "customColor":  "#4a3f30",
+                        "headlineFont":  "BODONI_MODA",
+                        "bodyFont":  "MANROPE",
+                        "labelFont":  "MANROPE",
+                        "namedColors":  {
+                                            "background":  "#fff8ef",
+                                            "error":  "#ba1a1a",
+                                            "error_container":  "#ffdad6",
+                                            "inverse_on_surface":  "#f7f0e2",
+                                            "inverse_primary":  "#d5c4b0",
+                                            "inverse_surface":  "#333027",
+                                            "on_background":  "#1e1b13",
+                                            "on_error":  "#ffffff",
+                                            "on_error_container":  "#93000a",
+                                            "on_primary":  "#ffffff",
+                                            "on_primary_container":  "#baaa97",
+                                            "on_primary_fixed":  "#231a0d",
+                                            "on_primary_fixed_variant":  "#504536",
+                                            "on_secondary":  "#ffffff",
+                                            "on_secondary_container":  "#73640e",
+                                            "on_secondary_fixed":  "#211b00",
+                                            "on_secondary_fixed_variant":  "#524700",
+                                            "on_surface":  "#1e1b13",
+                                            "on_surface_variant":  "#4c463e",
+                                            "on_tertiary":  "#ffffff",
+                                            "on_tertiary_container":  "#acada8",
+                                            "on_tertiary_fixed":  "#1a1c19",
+                                            "on_tertiary_fixed_variant":  "#454744",
+                                            "outline":  "#7e766d",
+                                            "outline_variant":  "#cfc5ba",
+                                            "primary":  "#33291b",
+                                            "primary_container":  "#4a3f30",
+                                            "primary_fixed":  "#f2e0cb",
+                                            "primary_fixed_dim":  "#d5c4b0",
+                                            "secondary":  "#6c5e06",
+                                            "secondary_container":  "#f7e382",
+                                            "secondary_fixed":  "#f7e382",
+                                            "secondary_fixed_dim":  "#dac769",
+                                            "surface":  "#fff8ef",
+                                            "surface_bright":  "#fff8ef",
+                                            "surface_container":  "#f5ede0",
+                                            "surface_container_high":  "#efe7da",
+                                            "surface_container_highest":  "#e9e2d4",
+                                            "surface_container_low":  "#faf3e5",
+                                            "surface_container_lowest":  "#ffffff",
+                                            "surface_dim":  "#e0d9cc",
+                                            "surface_tint":  "#695c4c",
+                                            "surface_variant":  "#e9e2d4",
+                                            "tertiary":  "#292b28",
+                                            "tertiary_container":  "#3f413e",
+                                            "tertiary_fixed":  "#e3e3de",
+                                            "tertiary_fixed_dim":  "#c6c7c2"
+                                        },
+                        "designMd":  "---\nname: Earth \u0026 Editorial\ncolors:\n  surface: \u0027#fff8ef\u0027\n  surface-dim: \u0027#e0d9cc\u0027\n  surface-bright: \u0027#fff8ef\u0027\n  surface-container-lowest: \u0027#ffffff\u0027\n  surface-container-low: \u0027#faf3e5\u0027\n  surface-container: \u0027#f5ede0\u0027\n  surface-container-high: \u0027#efe7da\u0027\n  surface-container-highest: \u0027#e9e2d4\u0027\n  on-surface: \u0027#1e1b13\u0027\n  on-surface-variant: \u0027#4c463e\u0027\n  inverse-surface: \u0027#333027\u0027\n  inverse-on-surface: \u0027#f7f0e2\u0027\n  outline: \u0027#7e766d\u0027\n  outline-variant: \u0027#cfc5ba\u0027\n  surface-tint: \u0027#695c4c\u0027\n  primary: \u0027#33291b\u0027\n  on-primary: \u0027#ffffff\u0027\n  primary-container: \u0027#4a3f30\u0027\n  on-primary-container: \u0027#baaa97\u0027\n  inverse-primary: \u0027#d5c4b0\u0027\n  secondary: \u0027#6c5e06\u0027\n  on-secondary: \u0027#ffffff\u0027\n  secondary-container: \u0027#f7e382\u0027\n  on-secondary-container: \u0027#73640e\u0027\n  tertiary: \u0027#292b28\u0027\n  on-tertiary: \u0027#ffffff\u0027\n  tertiary-container: \u0027#3f413e\u0027\n  on-tertiary-container: \u0027#acada8\u0027\n  error: \u0027#ba1a1a\u0027\n  on-error: \u0027#ffffff\u0027\n  error-container: \u0027#ffdad6\u0027\n  on-error-container: \u0027#93000a\u0027\n  primary-fixed: \u0027#f2e0cb\u0027\n  primary-fixed-dim: \u0027#d5c4b0\u0027\n  on-primary-fixed: \u0027#231a0d\u0027\n  on-primary-fixed-variant: \u0027#504536\u0027\n  secondary-fixed: \u0027#f7e382\u0027\n  secondary-fixed-dim: \u0027#dac769\u0027\n  on-secondary-fixed: \u0027#211b00\u0027\n  on-secondary-fixed-variant: \u0027#524700\u0027\n  tertiary-fixed: \u0027#e3e3de\u0027\n  tertiary-fixed-dim: \u0027#c6c7c2\u0027\n  on-tertiary-fixed: \u0027#1a1c19\u0027\n  on-tertiary-fixed-variant: \u0027#454744\u0027\n  background: \u0027#fff8ef\u0027\n  on-background: \u0027#1e1b13\u0027\n  surface-variant: \u0027#e9e2d4\u0027\ntypography:\n  headline-xl:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: \u0027600\u0027\n    lineHeight: \u00271.1\u0027\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: \u0027500\u0027\n    lineHeight: \u00271.2\u0027\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 28px\n    fontWeight: \u0027500\u0027\n    lineHeight: \u00271.2\u0027\n  body-lg:\n    fontFamily: Manrope\n    fontSize: 18px\n    fontWeight: \u0027400\u0027\n    lineHeight: \u00271.6\u0027\n  body-md:\n    fontFamily: Manrope\n    fontSize: 16px\n    fontWeight: \u0027400\u0027\n    lineHeight: \u00271.6\u0027\n  label-md:\n    fontFamily: Manrope\n    fontSize: 14px\n    fontWeight: \u0027600\u0027\n    lineHeight: \u00271.4\u0027\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: Manrope\n    fontSize: 12px\n    fontWeight: \u0027700\u0027\n    lineHeight: \u00271.2\u0027\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  margin-mobile: 24px\n  margin-desktop: 80px\n  gutter: 16px\n  section-gap: 64px\n  stack-sm: 8px\n  stack-md: 16px\n  stack-lg: 32px\n---\n\n## Brand \u0026 Style\n\nThe brand personality is **sophisticated, nurturing, and high-end**, mirroring the curated aesthetic of a premium beauty or wellness editorial. It targets a discerning audience seeking professional expertise wrapped in a warm, welcoming atmosphere.\n\nThe design style is a blend of **Minimalism** and **Editorial Elegance**. It prioritizes a \"breathing\" UI with generous whitespace (respiro), high-quality imagery, and a refined use of depth. The interface should feel like a physical magazine—structured yet fluid, with a focus on tactile serenity and effortless luxury. Every interaction should evoke a sense of calm and professional care.\n\n## Colors\n\nThis design system utilizes a warm, grounded earth-tone palette:\n\n*   **Primary (#4a3f30):** A deep, rich Espresso Brown used for primary headlines, call-to-action buttons, and high-impact structural elements.\n*   **Secondary (#c5b358):** A Soft Gold used sparingly for accent details, dividers, and decorative icons to convey luxury.\n*   **Base/Off-White (#f5f5f0):** The primary background color to ensure the UI feels airy and clean, softer than a pure digital white.\n*   **Neutral/Beige (#d9d2c5):** Used for surface containers, secondary buttons, and subtle borders to maintain the warm, organic feel.\n\nThe default color mode is **Light**, emphasizing clarity and the \"beauty magazine\" aesthetic.\n\n## Typography\n\nThe typography follows a classic editorial hierarchy:\n\n*   **Headlines:** Utilize **Bodoni Moda**. This high-contrast serif provides the \"vogue\" aesthetic. For large displays, use tight letter-spacing to enhance the premium feel.\n*   **Body \u0026 UI:** Utilize **Manrope**. A clean, modern sans-serif that balances the traditional serif headlines with contemporary readability.\n*   **Labels:** Labels and small UI elements use Manrope with increased letter-spacing and occasional uppercase styling to create a distinct, organized look.\n\nEnsure generous line heights (1.6x for body text) to maintain the \"respiro\" requested in the design narrative.\n\n## Layout \u0026 Spacing\n\nThe design system follows a **Mobile-First, Fluid Grid** philosophy. \n\n*   **Mobile (Default):** A 4-column grid with 24px side margins. Content is mostly single-column stacked to ensure ease of use on small screens.\n*   **Desktop:** A 12-column grid with significant 80px side margins to emulate a coffee-table book layout.\n*   **Philosophy:** \"Breathing room\" is prioritized. Section gaps are intentionally large (64px+) to prevent the user from feeling overwhelmed. Elements should never feel cramped; use white space as a structural element to guide the eye.\n\n## Elevation \u0026 Depth\n\nVisual hierarchy is achieved through **Tonal Layers** and **Soft Ambient Shadows**.\n\n*   **Layers:** Use the Beige (#d9d2c5) color for cards and containers sitting on the Off-White (#f5f5f0) background. This creates a soft, non-aggressive depth.\n*   **Shadows:** Avoid harsh black shadows. Use very diffused, low-opacity shadows with a hint of the primary brown (#4a3f30) in the tint to keep the depth feeling organic and warm. \n*   **Glassmorphism:** Use sparingly for navigation bars or floating overlays, employing a high-intensity background blur to maintain the sophisticated, ethereal feel.\n\n## Shapes\n\nThe shape language is **Soft (Level 1)**. \n\nWhile the design is editorial and structured, slightly rounded corners (0.25rem to 0.75rem) are used to soften the \"clinical\" nature of the health/beauty context, making it feel more approachable and welcoming. Rectilinear shapes are reserved for high-level image containers to maintain a gallery-like feel.\n\n## Components\n\n*   **Buttons:** Primary buttons use the Espresso Brown (#4a3f30) background with Off-White text. Secondary buttons use an outline in Gold (#c5b358) or a Beige fill.\n*   **Input Fields:** Minimalist design with a bottom border or a very light beige fill. Focus states should transition the border color to Gold.\n*   **Cards:** Use generous padding (24px+) and soft-tinted shadows. Images in cards should have a \"Soft\" corner radius.\n*   **Chips/Badges:** Small, uppercase labels with high letter-spacing, often using a Gold outline or Beige fill.\n*   **Lists:** Separated by very thin, low-opacity lines in the Neutral/Beige tone to maintain a clean vertical rhythm.\n*   **Featured Components:** Include \"Editorial Callouts\"—large-type quotes or highlights using the Bodoni Moda font to break up information-heavy sections.",
+                        "colorVariant":  "FIDELITY",
+                        "overridePrimaryColor":  "#4a3f30",
+                        "overrideSecondaryColor":  "#c5b358",
+                        "overrideTertiaryColor":  "#f5f5f0",
+                        "overrideNeutralColor":  "#d9d2c5",
+                        "spacingScale":  2,
+                        "typography":  {
+                                           "body-lg":  {
+                                                           "fontFamily":  "Manrope",
+                                                           "fontSize":  "18px",
+                                                           "fontWeight":  "400",
+                                                           "lineHeight":  "1.6"
+                                                       },
+                                           "body-md":  {
+                                                           "fontFamily":  "Manrope",
+                                                           "fontSize":  "16px",
+                                                           "fontWeight":  "400",
+                                                           "lineHeight":  "1.6"
+                                                       },
+                                           "headline-lg":  {
+                                                               "fontFamily":  "Bodoni Moda",
+                                                               "fontSize":  "32px",
+                                                               "fontWeight":  "500",
+                                                               "lineHeight":  "1.2"
+                                                           },
+                                           "headline-lg-mobile":  {
+                                                                      "fontFamily":  "Bodoni Moda",
+                                                                      "fontSize":  "28px",
+                                                                      "fontWeight":  "500",
+                                                                      "lineHeight":  "1.2"
+                                                                  },
+                                           "headline-xl":  {
+                                                               "fontFamily":  "Bodoni Moda",
+                                                               "fontSize":  "48px",
+                                                               "fontWeight":  "600",
+                                                               "lineHeight":  "1.1",
+                                                               "letterSpacing":  "-0.02em"
+                                                           },
+                                           "label-md":  {
+                                                            "fontFamily":  "Manrope",
+                                                            "fontSize":  "14px",
+                                                            "fontWeight":  "600",
+                                                            "lineHeight":  "1.4",
+                                                            "letterSpacing":  "0.05em"
+                                                        },
+                                           "label-sm":  {
+                                                            "fontFamily":  "Manrope",
+                                                            "fontSize":  "12px",
+                                                            "fontWeight":  "700",
+                                                            "lineHeight":  "1.2",
+                                                            "letterSpacing":  "0.1em"
+                                                        }
+                                       },
+                        "spacing":  {
+                                        "gutter":  "16px",
+                                        "margin-desktop":  "80px",
+                                        "margin-mobile":  "24px",
+                                        "section-gap":  "64px",
+                                        "stack-lg":  "32px",
+                                        "stack-md":  "16px",
+                                        "stack-sm":  "8px"
+                                    },
+                        "headlineFontFamily":  "Bodoni Moda",
+                        "bodyFontFamily":  "Manrope",
+                        "labelFontFamily":  "Manrope"
+                    },
+    "screenInstances":  [
+                            {
+                                "id":  "08b011e9-0987-49ad-9bdb-df95140b6240",
+                                "sourceScreen":  "projects/7081342922175185559/screens/10575250934247491501",
+                                "x":  576,
+                                "width":  512,
+                                "height":  640,
+                                "type":  "SCREEN_INSTANCE"
+                            },
+                            {
+                                "id":  "23b75037ba8b4ed5ac540e66e58b3c95",
+                                "sourceScreen":  "projects/7081342922175185559/screens/23b75037ba8b4ed5ac540e66e58b3c95",
+                                "y":  5464,
+                                "width":  390,
+                                "height":  5207
+                            },
+                            {
+                                "id":  "25b4cfb19daf44ecb9717c20f6e51377",
+                                "sourceScreen":  "projects/7081342922175185559/screens/25b4cfb19daf44ecb9717c20f6e51377",
+                                "x":  2752,
+                                "width":  390,
+                                "height":  5208
+                            },
+                            {
+                                "id":  "a2b21841-d8d7-4d94-ba1d-2b7a159d68fb",
+                                "sourceScreen":  "projects/7081342922175185559/screens/10575250934247492511",
+                                "width":  512,
+                                "height":  641,
+                                "type":  "SCREEN_INSTANCE"
+                            },
+                            {
+                                "id":  "assets_b693f400d6914e7697050ce7ea61d5bd",
+                                "x":  1728,
+                                "width":  960,
+                                "height":  540,
+                                "sourceAsset":  "assets/b693f400d6914e7697050ce7ea61d5bd",
+                                "type":  "DESIGN_SYSTEM_INSTANCE"
+                            },
+                            {
+                                "id":  "b980187a-f4f1-4454-8e1c-fb004269225a",
+                                "sourceScreen":  "projects/7081342922175185559/screens/10575250934247490491",
+                                "x":  1152,
+                                "width":  512,
+                                "height":  512,
+                                "type":  "SCREEN_INSTANCE"
+                            }
+                        ],
+    "metadata":  {
+                     "userRole":  "OWNER"
+                 }
+}
