@@ -74,7 +74,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap" rel="stylesheet"/>
 
     <!-- Standalone Production Compiled CSS (Zero Runtime Overhead, Zero FOUC) -->
-    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css?v=3"/>
+
+    <!-- Critical Inlined Layout Protection (Prevents Browser Cache Mismatches) -->
+    <style>
+      .site-header { width: 100%; position: sticky; top: 0; z-index: 50; background: rgba(255,249,240,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(207,197,186,0.35); }
+      .header-inner { max-width: 1320px; margin: 0 auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+      .header-nav-desktop { display: flex; align-items: center; gap: 28px; font-size: 13px; font-weight: 600; color: #5A4E42; }
+      .header-menu-btn { display: none; }
+      .hero-section { max-width: 1320px; margin: 0 auto; padding: 40px 24px 60px 24px; display: flex; align-items: center; justify-content: center; min-height: calc(100vh - 75px); }
+      .hero-container { display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; gap: 48px; }
+      .hero-left-col { width: 48%; max-width: 580px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; flex-shrink: 0; }
+      .hero-right-col { width: 52%; display: flex; justify-content: center; align-items: center; position: relative; }
+      .hero-headline { font-family: 'Bodoni Moda', Georgia, serif; font-size: clamp(2.8rem, 4.5vw, 5.4rem); line-height: 0.96; letter-spacing: -0.025em; color: #2F241A; text-align: left; margin-bottom: 16px; }
+      .hero-arch-container { position: relative; width: 100%; max-width: 560px; height: 620px; display: flex; justify-content: center; align-items: flex-end; }
+      @media (max-width: 768px) {
+        .header-nav-desktop { display: none !important; }
+        .header-menu-btn { display: flex !important; }
+        .hero-container { flex-direction: column !important; align-items: flex-start !important; gap: 32px !important; }
+        .hero-left-col { width: 100% !important; }
+        .hero-right-col { width: 100% !important; }
+        .hero-arch-container { height: 440px !important; max-width: 380px !important; margin: 1rem auto 0 auto !important; }
+      }
+    </style>
 
     <!-- Modular Production JavaScript -->
     <script src="assets/js/main.js" defer></script>
@@ -83,7 +105,7 @@
 
     <!-- 1. HEADER (Horizontal Editorial com Navegação e CTA Verde) -->
     <header class="site-header" id="main-header">
-        <div class="max-w-[1320px] mx-auto px-6 md:px-10 py-3.5 flex justify-between items-center">
+        <div class="header-inner">
             
             <!-- Brand Logo Monogram & Editorial Typography -->
             <a href="#" class="flex items-center gap-3.5 group" aria-label="Página Inicial Dra. Líbia Dias">
@@ -101,7 +123,7 @@
             </a>
 
             <!-- Desktop Navigation Menu (Visível no PC) -->
-            <nav class="header-nav-desktop text-[13px] font-semibold text-[#5A4E42]" id="desktop-nav" aria-label="Navegação Principal">
+            <nav class="header-nav-desktop" id="desktop-nav" aria-label="Navegação Principal">
                 <a href="#identificacao" class="nav-link hover:text-[#2F241A]">Para Quem É</a>
                 <a href="#procedimentos" class="nav-link hover:text-[#2F241A]">Procedimentos</a>
                 <a href="#como-funciona" class="nav-link hover:text-[#2F241A]">Como Funciona</a>
@@ -138,7 +160,7 @@
     </header>
 
     <!-- 2. HERO SECTION (Estrutura 2 Colunas no PC) -->
-    <section class="hero-section px-6 md:px-10 max-w-[1320px] mx-auto relative z-10">
+    <section class="hero-section">
         <div class="hero-container">
             
             <!-- Coluna Esquerda: Copy, Headline Editorial, CTAs e Trust Badges (PC: Esquerda) -->
@@ -153,7 +175,7 @@
                 </div>
 
                 <!-- Headline Editorial Serif -->
-                <h1 class="hero-headline mb-4 font-semibold">
+                <h1 class="hero-headline font-semibold">
                     Realce seus<br/>
                     traços sem<br/>
                     perder sua<br/>
